@@ -4,30 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <title>Nikkah Invitation ·</title>
+    <title>Nikkah Invitation · Abib Rahuman &amp; Jasima Barveen</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Amiri&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Great+Vibes&family=Noto+Serif+Tamil:wght@400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/png"
-        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBaKqnAO41n8TjEpztGd0s8q8XRf1y8M7O5xRcE95X7HmBhefEzGQXK2s&s=10">
     <meta name="theme-color" content="#0c2a26">
     <style>
-        /* ===== Emerald & Champagne theme ===== */
         :root {
             --cr: #0c2a26;
-            /* deep emerald */
             --cr2: #14403a;
-            /* lighter emerald */
             --go: #e3c887;
-            /* champagne gold */
-            --gl: #fff6d8;
-            /* light gold */
-            --br: #e3c887;
-            /* headings */
             --ink: #fbf4e4;
-            /* ivory body text */
             --dk: #071a17;
-            /* darkest green */
             --la: 'Cormorant Garamond', Georgia, serif;
             --ta: 'Noto Serif Tamil', Georgia, serif;
             --sc: 'Great Vibes', cursive;
@@ -42,12 +30,7 @@
         }
 
         html {
-            scroll-behavior: smooth;
-            scroll-padding-top: env(safe-area-inset-top, 0px)
-        }
-
-        html.lenis {
-            scroll-behavior: auto
+            scroll-behavior: smooth
         }
 
         body {
@@ -62,6 +45,11 @@
             font: .92rem/1.95 var(--ta)
         }
 
+        html[lang=ta] * {
+            letter-spacing: 0 !important;
+            text-transform: none !important
+        }
+
         body.lock {
             overflow: hidden
         }
@@ -71,9 +59,7 @@
             margin: 0 auto;
             position: relative;
             overflow: hidden;
-            background:
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='none' stroke='%23e3c887' stroke-width='.6' opacity='.13'%3E%3Crect x='18' y='18' width='24' height='24'/%3E%3Crect x='18' y='18' width='24' height='24' transform='rotate(45 30 30)'/%3E%3C/g%3E%3C/svg%3E"),
-                linear-gradient(180deg, var(--cr), var(--cr2) 50%, var(--cr))
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='none' stroke='%23e3c887' stroke-width='.6' opacity='.13'%3E%3Crect x='18' y='18' width='24' height='24'/%3E%3Crect x='18' y='18' width='24' height='24' transform='rotate(45 30 30)'/%3E%3C/g%3E%3C/svg%3E"), linear-gradient(180deg, var(--cr), var(--cr2) 50%, var(--cr))
         }
 
         @media(min-width:640px) {
@@ -125,7 +111,6 @@
             padding: 3px;
             border-radius: 99px;
             background: rgba(7, 26, 23, .88);
-            -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
             border: 1px solid var(--go)
         }
@@ -145,7 +130,6 @@
             color: var(--dk)
         }
 
-        /* gold shine text */
         .shine,
         .nm,
         .sec,
@@ -160,17 +144,12 @@
             animation: gs 5s linear infinite
         }
 
-        .shine {
-            filter: drop-shadow(0 2px 10px rgba(227, 200, 135, .3))
-        }
-
         @keyframes gs {
             to {
                 background-position: -250% 0
             }
         }
 
-        /* frame */
         .frame {
             position: absolute;
             inset: 14px;
@@ -259,7 +238,6 @@
             }
         }
 
-        /* cover */
         .cover {
             position: fixed;
             inset: 0;
@@ -297,15 +275,9 @@
             margin: 6px 0 0
         }
 
-        html[lang=ta] .cap {
-            letter-spacing: 0;
-            text-transform: none;
-            font-size: .85rem
-        }
-
         .nm {
             display: block;
-            font: 400 4rem/1.05 var(--sc)
+            font: 400 3.6rem/1.1 var(--sc)
         }
 
         html[lang=ta] .nm {
@@ -314,7 +286,7 @@
 
         .amp {
             display: block;
-            font: italic 2.4rem/1 var(--la);
+            font: italic 2.2rem/1 var(--la);
             color: var(--go);
             margin: 2px 0
         }
@@ -338,16 +310,11 @@
         }
 
         .dt {
-            letter-spacing: .16em;
+            letter-spacing: .14em;
             font-size: .88rem;
             text-transform: uppercase;
             margin: 12px 0 0;
             color: var(--go)
-        }
-
-        html[lang=ta] .dt {
-            letter-spacing: 0;
-            text-transform: none
         }
 
         .open-b {
@@ -362,12 +329,6 @@
             padding: 13px 32px;
             cursor: pointer;
             animation: glow 2.6s ease-in-out infinite alternate
-        }
-
-        html[lang=ta] .open-b {
-            letter-spacing: 0;
-            text-transform: none;
-            font: 600 .9rem var(--ta)
         }
 
         @keyframes glow {
@@ -415,7 +376,6 @@
             }
         }
 
-        /* text */
         .title {
             font: 600 1.65rem/1.4 var(--la);
             margin: 8px 0
@@ -428,24 +388,33 @@
         .sal {
             color: var(--go);
             font-weight: 600;
-            font-size: .9rem;
-            margin: 0 0 10px
+            font-size: .95rem;
+            margin: 0 0 14px
         }
 
-        .lead {
-            font-weight: 700;
-            color: var(--br);
-            margin: 0 0 4px
+        .par {
+            margin: 0 auto;
+            max-width: 40ch
+        }
+
+        .par b {
+            color: var(--go)
+        }
+
+        .and {
+            font-style: italic;
+            margin: 4px 0;
+            opacity: .85
         }
 
         .body {
-            margin: 0 auto 10px;
-            max-width: 44ch
+            margin: 10px auto;
+            max-width: 42ch
         }
 
         .big {
             font-weight: 700;
-            color: var(--br);
+            color: var(--go);
             font-size: 1.2rem;
             margin: 6px 0
         }
@@ -460,23 +429,25 @@
         }
 
         .pn {
-            font: italic 600 2rem/1.3 var(--la);
+            font: 400 3rem/1.2 var(--sc);
             margin: 4px 0
         }
 
         html[lang=ta] .pn {
-            font: 700 1.4rem/1.6 var(--ta)
+            font: 700 1.5rem/1.6 var(--ta)
         }
 
-        .fam {
-            font-size: .92rem;
-            margin: 0 auto 4px;
-            max-width: 36ch
-        }
-
-        .amp.s {
-            font-size: 3rem;
-            margin: 14px 0
+        .heart {
+            width: 54px;
+            height: 54px;
+            margin: 10px auto;
+            display: grid;
+            place-items: center;
+            border: 1.5px solid var(--go);
+            border-radius: 50% 50% 50% 50%;
+            color: var(--go);
+            font-size: .8rem;
+            font-style: italic
         }
 
         .cal {
@@ -486,7 +457,6 @@
             border: 1.5px solid rgba(227, 200, 135, .7);
             border-radius: 110px 110px 12px 12px;
             background: rgba(255, 255, 255, .05);
-            -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px)
         }
 
@@ -494,7 +464,7 @@
             margin: 6px 0 8px;
             font: 600 1.3rem var(--la);
             letter-spacing: .2em;
-            color: var(--br)
+            color: var(--go)
         }
 
         .gr {
@@ -552,15 +522,13 @@
             padding: 10px 2px 6px;
             border: 1px solid rgba(227, 200, 135, .7);
             border-radius: 40px 40px 6px 6px;
-            background: rgba(255, 255, 255, .06);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px)
+            background: rgba(255, 255, 255, .06)
         }
 
         .count b {
             display: block;
             font: 700 2rem/1.1 var(--la);
-            color: var(--br);
+            color: var(--go);
             font-variant-numeric: tabular-nums
         }
 
@@ -591,31 +559,16 @@
             color: var(--go)
         }
 
-        .tel {
-            color: var(--go);
-            font-weight: 700;
-            letter-spacing: .06em;
-            text-decoration: none
-        }
-
-        .hosts {
-            display: grid;
-            gap: 16px;
-            margin-bottom: 10px
-        }
-
-        .hosts p {
-            margin: 0
-        }
-
         .lbl {
-            font-size: .85rem;
-            opacity: .8
+            font-size: .9rem;
+            opacity: .8;
+            margin: 0 0 6px
         }
 
         .fm {
             font-weight: 600;
-            color: var(--br)
+            color: var(--go);
+            margin: 0 0 12px
         }
 
         .orn {
@@ -625,123 +578,15 @@
             margin: 16px auto
         }
 
-        .thx {
-            font: 1.7rem var(--ar);
-            margin: 18px 0 0
-        }
-
-        /* footer */
-        .grand {
-            --ch: #e3c887;
-            --iv: #fbf4e4;
-            --p: 0;
-            position: relative;
-            padding: 110px 26px 0;
-            text-align: center;
-            overflow: hidden;
-            color: var(--iv);
-            background: radial-gradient(ellipse at 50% 0, #14403a, #0c2a26 62%, #071a17);
-            border-top: 1.5px solid #b99443
-        }
-
-        .grand::before {
-            content: "";
-            position: absolute;
-            inset: -20%;
-            pointer-events: none;
-            background: radial-gradient(circle at 30% 20%, rgba(227, 200, 135, .16), transparent 38%), radial-gradient(circle at 75% 70%, rgba(60, 160, 140, .16), transparent 40%);
-            animation: aur 14s ease-in-out infinite alternate
-        }
-
-        @keyframes aur {
-            to {
-                transform: translate3d(6%, 4%, 0) scale(1.12)
-            }
-        }
-
-        .grand .fl {
-            translate: 0 calc((1 - var(--p)) * 40px);
-            opacity: .95
-        }
-
-        .grand>.z {
-            position: relative;
-            z-index: 3
-        }
-
-        .star {
-            position: absolute;
-            left: 50%;
-            top: 360px;
-            width: 560px;
-            max-width: 160%;
-            translate: -50% 0;
-            opacity: .17;
-            pointer-events: none;
-            z-index: 1;
-            animation: spin 70s linear infinite
-        }
-
-        @keyframes spin {
-            to {
-                rotate: 360deg
-            }
-        }
-
-        .gm {
-            width: 56px;
-            margin: 0 auto 10px;
-            filter: drop-shadow(0 0 12px rgba(227, 200, 135, .6));
-            animation: swing 6s ease-in-out infinite alternate
-        }
-
-        .gn {
-            font: 400 3.4rem/1.1 var(--sc);
-            margin: 0;
-            display: block
-        }
-
-        html[lang=ta] .gn {
-            font: 700 1.7rem/1.7 var(--ta)
-        }
-
-        .gdt {
-            font-size: 1rem;
-            font-style: italic;
-            letter-spacing: .05em;
-            color: rgba(251, 244, 228, .8);
-            margin: 12px 0 0
-        }
-
-        html[lang=ta] .gdt {
-            font-style: normal;
-            letter-spacing: 0
-        }
-
         .glass {
-            position: relative;
-            overflow: hidden;
             max-width: 380px;
-            margin: 34px auto 0;
-            padding: 52px 22px 30px;
+            margin: 0 auto;
+            padding: 46px 22px 28px;
             border-radius: 160px 160px 20px 20px;
             background: linear-gradient(150deg, rgba(255, 255, 255, .14), rgba(255, 255, 255, .03));
-            -webkit-backdrop-filter: blur(16px) saturate(1.4);
-            backdrop-filter: blur(16px) saturate(1.4);
+            backdrop-filter: blur(14px);
             border: 1px solid rgba(227, 200, 135, .55);
-            box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .6), inset 0 1px 0 rgba(255, 255, 255, .25), inset 0 0 0 6px rgba(227, 200, 135, .06);
-            transform: translateY(calc((1 - var(--p)) * 50px)) scale(calc(.93 + var(--p) * .07))
-        }
-
-        .gleam {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            width: 40%;
-            pointer-events: none;
-            background: linear-gradient(105deg, transparent, rgba(255, 255, 255, .22), transparent);
-            transform: translateX(calc(var(--p) * 330% - 100%)) skewX(-18deg)
+            box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .6), inset 0 1px 0 rgba(255, 255, 255, .25)
         }
 
         .dttl {
@@ -754,151 +599,162 @@
         }
 
         .dar {
-            font: 2rem/1.9 var(--ar);
+            font: 1.9rem/1.9 var(--ar);
             margin: 6px 0 8px
         }
 
         .dtr {
             font-style: italic;
             font-size: .95rem;
-            letter-spacing: .03em;
             color: rgba(251, 244, 228, .75);
             margin: 0 0 6px
         }
 
-        html[lang=ta] .dtr {
-            font-style: normal;
-            letter-spacing: 0
+        .thx {
+            font: 1.7rem var(--ar);
+            margin: 18px 0 0
         }
 
-        .dmn {
-            font-size: 1.02rem;
-            line-height: 1.85;
-            color: var(--iv);
-            margin: 10px 0 0
+        /* ===== FOOTER ===== */
+        .ft {
+            position: relative;
+            overflow: hidden;
+            padding: 56px 24px 0;
+            background: linear-gradient(180deg, #0f3a31, #0a2b25 70%, #071a17);
+            border-top: 1.5px solid #b99443;
+            text-align: left;
+            font-size: .95rem
         }
 
-        .row {
+        .fgrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px 20px
+        }
+
+        .fgrid h4 {
+            margin: 0 0 10px;
+            font: 700 1rem var(--la);
+            color: #fff6d8
+        }
+
+        .fgrid a,
+        .fgrid p {
+            display: block;
+            margin: 0 0 7px;
+            font-size: .88rem;
+            line-height: 1.5;
+            color: rgba(251, 244, 228, .78);
+            text-decoration: none
+        }
+
+        .fgrid a:hover {
+            color: var(--go)
+        }
+
+        html[lang=ta] .fgrid h4 {
+            font: 700 .9rem var(--ta)
+        }
+
+        html[lang=ta] .fgrid a,
+        html[lang=ta] .fgrid p {
+            font-size: .8rem;
+            line-height: 1.8
+        }
+
+        .fline {
+            height: 1px;
+            background: rgba(227, 200, 135, .3);
+            margin: 30px 0 20px
+        }
+
+        .frow {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px
+        }
+
+        .frow p {
+            margin: 0 0 4px;
+            font-size: .88rem;
+            color: rgba(251, 244, 228, .8);
+            max-width: 30ch
+        }
+
+        .frow .cp {
+            font-weight: 600;
+            color: #fff6d8
+        }
+
+        .chips {
+            display: flex;
+            gap: 8px
+        }
+
+        .chips a {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: #fff6d8;
+            color: var(--dk);
+            text-decoration: none;
+            font-size: .9rem
+        }
+
+        .wm {
+            margin: 10px -24px 0;
+            text-align: center;
+            font: 400 5.2rem/1.15 var(--sc);
+            white-space: nowrap;
+            background: linear-gradient(180deg, rgba(255, 246, 216, .28), rgba(255, 246, 216, 0) 85%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            user-select: none;
+            padding-bottom: 6px
+        }
+
+        html[lang=ta] .wm {
+            font: 700 2.4rem/1.6 var(--ta)
+        }
+
+        .dev {
             position: relative;
             z-index: 3;
-            overflow: hidden;
-            margin: 10px -26px;
-            -webkit-mask: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
-            mask: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)
+            margin: 0 -24px;
+            padding: 18px 24px calc(26px + env(safe-area-inset-bottom, 0px));
+            border-top: 1px solid rgba(227, 200, 135, .3);
+            background: rgba(0, 0, 0, .28);
+            text-align: center
         }
 
-        #r1 {
-            margin-top: 44px
+        .dev p {
+            margin: 0;
+            font-size: .85rem;
+            font-style: italic;
+            color: rgba(251, 244, 228, .7)
         }
 
-        .trk {
-            display: flex;
-            width: max-content;
-            animation: mq 28s linear infinite
+        .dev .dn {
+            font: 2.4rem/1.2 var(--sc);
+            margin: 2px 0 10px;
+            font-style: normal;
+            display: block
         }
 
-        .row.rv .trk {
-            animation-direction: reverse
+        html[lang=ta] .dev .dn {
+            font: 700 1.3rem/1.6 var(--ta)
         }
 
-        @keyframes mq {
-            to {
-                transform: translateX(-50%)
-            }
+        .dev .btn {
+            display: inline-block;
+            box-shadow: 0 0 22px rgba(227, 200, 135, .4);
+            animation: glow 2.6s ease-in-out infinite alternate
         }
 
-        .chip {
-            margin-right: 12px;
-            padding: 9px 20px;
-            border-radius: 99px;
-            white-space: nowrap;
-            color: var(--iv);
-            border: 1px solid rgba(227, 200, 135, .6);
-            background: rgba(255, 255, 255, .07);
-            -webkit-backdrop-filter: blur(6px);
-            backdrop-filter: blur(6px)
-        }
-
-        .sp {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            z-index: 1
-        }
-
-        .st {
-            position: absolute;
-            width: var(--w);
-            height: var(--w);
-            background: var(--ch);
-            opacity: .25;
-            clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%);
-            animation: tw var(--t) ease-in-out infinite, dr calc(var(--t) * 4) ease-in-out infinite alternate;
-            animation-delay: var(--dl)
-        }
-
-        @keyframes tw {
-            50% {
-                opacity: .95;
-                transform: scale(1.3) rotate(25deg)
-            }
-        }
-
-        @keyframes dr {
-            to {
-                translate: 0 -46px
-            }
-        }
-
-
-
-        /* ===== services showcase ===== */
-        .svc{position:relative;z-index:3;margin-top:70px}
-        .mono{position:relative;width:84px;height:84px;margin:0 auto 12px;display:grid;place-items:center}
-        .mono::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(#b99443,#fff6d8,#b99443,#fff6d8,#b99443);animation:spin 6s linear infinite}
-        .mono::after{content:"";position:absolute;inset:3px;border-radius:50%;background:radial-gradient(circle at 35% 25%,#1b5249,#071a17)}
-        .mono span{position:relative;z-index:2;font:2.2rem/1 var(--sc)}
-        .cr1{font-size:.9rem;font-style:italic;color:rgba(251,244,228,.7);margin:0}
-        .sname{font:3rem/1.15 var(--sc);margin:0}
-        .role{display:inline-block;margin:4px 0 0;padding:5px 18px;border:1px solid rgba(227,200,135,.7);border-radius:99px;
-          font:600 .8rem var(--la);letter-spacing:.2em;text-transform:uppercase;color:var(--ch);background:rgba(255,255,255,.06)}
-        html[lang=ta] .role{letter-spacing:0;text-transform:none;font:600 .85rem var(--ta)}
-        .svh{font:2.4rem/1.2 var(--sc);margin:6px 0 4px}
-        html[lang=ta] .svh{font:700 1.35rem/1.6 var(--ta)}
-        .svs{max-width:34ch;margin:0 auto;color:rgba(251,244,228,.85);font-size:1rem}
-        .sg{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:400px;margin:24px auto 0;text-align:center}
-        .sc{position:relative;overflow:hidden;padding:18px 12px 16px;border-radius:44px 44px 14px 14px;
-          background:linear-gradient(150deg,rgba(255,255,255,.12),rgba(255,255,255,.03));
-          -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
-          border:1px solid rgba(227,200,135,.5);box-shadow:0 14px 30px -14px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.18);
-          transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .4s,border-color .4s}
-        .sc::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;pointer-events:none;
-          background:linear-gradient(105deg,transparent,rgba(255,255,255,.2),transparent);transform:skewX(-18deg);
-          animation:sw 6s ease-in-out infinite;animation-delay:var(--d,0s)}
-        @keyframes sw{0%,55%{left:-60%}100%{left:130%}}
-        .sc i{display:grid;place-items:center;width:46px;height:46px;margin:0 auto 8px;border-radius:50%;font-style:normal;font-size:1.35rem;
-          background:radial-gradient(circle at 35% 30%,#fff1b8,#b99443);box-shadow:0 0 18px rgba(227,200,135,.45);
-          animation:fy 4s ease-in-out infinite alternate;animation-delay:var(--d,0s)}
-        @keyframes fy{to{transform:translateY(-4px)}}
-        .sc b{display:block;font:700 1rem/1.3 var(--la);color:var(--ch);margin-bottom:3px}
-        html[lang=ta] .sc b{font:700 .85rem/1.5 var(--ta)}
-        .sc small{display:block;font-size:.82rem;line-height:1.45;color:rgba(251,244,228,.8)}
-        html[lang=ta] .sc small{font-size:.72rem;line-height:1.7}
-        .sc.hot{grid-column:1/-1;display:flex;align-items:center;gap:14px;text-align:left;padding:20px 18px;border-radius:70px 70px 16px 16px;
-          border:1.5px solid var(--ch);background:linear-gradient(150deg,rgba(227,200,135,.22),rgba(255,255,255,.04));animation:hotg 3.2s ease-in-out infinite alternate}
-        @keyframes hotg{to{box-shadow:0 0 30px rgba(227,200,135,.45),0 14px 30px -14px rgba(0,0,0,.6)}}
-        .sc.hot i{flex:none;width:58px;height:58px;font-size:1.7rem;margin:0}
-        .sc.hot b{font-size:1.2rem}
-        .sc.hot em{display:inline-block;margin-bottom:4px;padding:2px 12px;border-radius:99px;font:600 .68rem var(--la);letter-spacing:.14em;text-transform:uppercase;
-          font-style:normal;color:var(--dk);background:linear-gradient(135deg,#f3dfa6,#b99443)}
-        html[lang=ta] .sc.hot em{letter-spacing:0;text-transform:none;font:600 .7rem var(--ta)}
-        .js .r.in.sc:hover{transform:translateY(-5px);border-color:var(--ch);box-shadow:0 20px 36px -14px rgba(0,0,0,.7),0 0 22px rgba(227,200,135,.3)}
-        .svc .row{margin-top:30px}
-        .svc .btns{margin-top:22px}
-        .btn.wa{padding:12px 26px;font-size:1rem;box-shadow:0 0 22px rgba(227,200,135,.4);animation:glow 2.6s ease-in-out infinite alternate}
-        .cr{position:relative;z-index:3;margin:40px -26px 0;padding:20px 24px calc(30px + env(safe-area-inset-bottom,0px));border-top:1px solid rgba(227,200,135,.3);background:rgba(0,0,0,.28);text-align:center;font-size:.85rem;color:rgba(251,244,228,.65)}
-
-        /* motion */
         .js .r {
             opacity: 0;
             transform: translateY(26px);
@@ -948,12 +804,16 @@
 
         @media(max-width:380px) {
             .nm {
-                font-size: 3.3rem
+                font-size: 3rem
             }
 
             .scr {
                 padding-left: 22px;
                 padding-right: 22px
+            }
+
+            .wm {
+                font-size: 4.2rem
             }
         }
 
@@ -1008,11 +868,6 @@
                     <ellipse cy="-24" rx="15" ry="26" transform="rotate(288)" />
                 </g>
                 <circle r="8" fill="#e6c97f" />
-                <g fill="#c98a3c">
-                    <circle cx="-4" cy="-3" r="1.3" />
-                    <circle cx="4" cy="2" r="1.3" />
-                    <circle cx="1" cy="-6" r="1.3" />
-                </g>
             </symbol>
             <symbol id="pk" viewBox="-50 -50 100 100">
                 <g fill="#f6cfc2">
@@ -1046,7 +901,7 @@
                 <path d="M30 48H50L58 66H22Z" fill="url(#gg)" />
                 <rect x="22" y="66" width="36" height="72" rx="6" fill="#f7dc96" fill-opacity=".85" stroke="#e3c887"
                     stroke-width="2" />
-                <path d="M40 70V134M22 100H58" stroke="#b99443" stroke-width="1" />
+                <path d="M40 70V134M22 100H58" stroke="#b99443" />
                 <ellipse cx="40" cy="108" rx="7" ry="14" fill="#fff4c4" />
                 <path d="M22 138H58L52 154H28Z" fill="url(#gg)" />
                 <path d="M40 154V176" stroke="#e3c887" stroke-width="2" />
@@ -1054,6 +909,7 @@
             </symbol>
         </defs>
     </svg>
+
     <div id="bar"></div>
     <div class="lang" role="group" aria-label="Language"><button type="button" data-l="en"
             class="on">English</button><button type="button" data-l="ta">தமிழ்</button></div>
@@ -1083,6 +939,8 @@
     <div id="pt" aria-hidden="true"></div>
 
     <main class="sheet">
+
+        <!-- 1. Welcome -->
         <section class="scr" id="top">
             <div class="frame"></div>
             <span class="fl tl"><svg viewBox="0 0 220 220">
@@ -1106,191 +964,172 @@
             </div>
         </section>
 
-        <section class="scr" id="inv"><span class="fl tl"><svg viewBox="0 0 220 220">
+        <!-- 2. Invitation text -->
+        <section class="scr" id="inv">
+            <span class="fl tl"><svg viewBox="0 0 220 220">
                     <use href="#ca" />
                 </svg></span><span class="fl br2"><svg viewBox="0 0 220 220">
                     <use href="#ca" />
                 </svg></span>
-            <div class="z"><svg style="width:46px;height:46px" viewBox="-50 -50 100 100">
+            <div class="z">
+                <svg style="width:46px;height:46px" viewBox="-50 -50 100 100">
                     <use href="#cres" />
                 </svg>
                 <h2 class="title r" data-t="title"></h2>
                 <p class="sal r" data-t="sal"></p>
-                <p class="lead r" data-t="lead"></p>
-                <p class="body r" data-t="b1"></p>
-                <p class="big r" data-t="dl"></p>
-                <p class="body r" data-t="b2"></p>
+                <p class="par r" data-t="p1"></p>
+                <p class="and r" data-t="and"></p>
+                <p class="par r" data-t="p2"></p>
+                <p class="body r" data-t="inv1"></p>
             </div>
         </section>
 
-        <section class="scr"><span class="fl tr"><svg viewBox="0 0 220 220">
+        <!-- 3. Couple -->
+        <section class="scr" id="cpl">
+            <span class="fl tr"><svg viewBox="0 0 220 220">
                     <use href="#ca" />
                 </svg></span><span class="fl bl"><svg viewBox="0 0 220 220">
                     <use href="#ca" />
                 </svg></span>
             <div class="z">
-                <p class="fam r" data-t="fg"></p>
-                <h2 class="pn r" data-t="ng"></h2>
-                <p class="r" data-t="asg"></p><span class="amp s r">&amp;</span>
-                <p class="fam r" data-t="fb"></p>
-                <h2 class="pn r" data-t="nb"></h2>
-                <p class="r" data-t="asb"></p>
+                <h2 class="pn shine r" data-t="ng"></h2>
+                <div class="heart r" data-t="with"></div>
+                <h2 class="pn shine r" data-t="nb"></h2>
             </div>
         </section>
 
-        <section class="scr"><span class="fl tl"><svg viewBox="0 0 220 220">
+        <!-- 4. Date -->
+        <section class="scr" id="dt">
+            <span class="fl tl"><svg viewBox="0 0 220 220">
                     <use href="#ca" />
                 </svg></span><span class="fl tr"><svg viewBox="0 0 220 220">
                     <use href="#ca" />
                 </svg></span>
             <div class="z">
-                <h2 class="sec r" data-t="sd"></h2>
+                <p class="sec r" style="font-size:2.2rem" data-t="insha"></p>
                 <div class="cal r">
                     <h3 data-t="cm"></h3>
                     <div class="gr" id="gr"></div>
                 </div>
-                <p class="big r" data-t="when"></p>
-                <p class="r" data-t="hijri" style="font-size:.9rem;margin:0 0 14px"></p>
+                <p class="big r" data-t="on"></p>
+                <p class="r" data-t="hijri" style="margin:0 0 4px"></p>
+                <p class="r" data-t="time" style="margin:0 0 14px;font-size:.95rem"></p>
                 <div class="count r" id="count">
                     <div><b data-u="d">00</b><small data-t="ud"></small></div>
                     <div><b data-u="h">00</b><small data-t="uh"></small></div>
                     <div><b data-u="m">00</b><small data-t="um"></small></div>
                     <div><b data-u="s">00</b><small data-t="us"></small></div>
                 </div>
-                <p class="sec r" style="font-size:2rem">In sha Allah</p>
             </div>
         </section>
 
-        <section class="scr"><span class="fl tr"><svg viewBox="0 0 220 220">
+        <!-- 5. Venue -->
+        <section class="scr" id="ven">
+            <span class="fl tr"><svg viewBox="0 0 220 220">
                     <use href="#ca" />
                 </svg></span><span class="fl bl"><svg viewBox="0 0 220 220">
                     <use href="#ca" />
                 </svg></span>
             <div class="z">
-                <h2 class="sec r" data-t="inv"></h2>
-                <p class="body r" data-t="v1"></p>
-                <h3 class="pn r" data-t="vn" style="font-size:1.7rem"></h3>
-                <p class="body r" data-t="v2"></p>
-                <div class="btns r"><a class="btn" target="_blank" rel="noopener"
-                        href="https://maps.app.goo.gl/C2tkyKpv8eTnB5Yw6"
-                        data-t="bd"></a><a class="btn alt" target="_blank" rel="noopener"
-                        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nikkah+-+Abib+Rahman+%26+Jeshima+Parveen&dates=20261025T043000Z/20261025T063000Z&location=Madina+Palli+Vasal+Mandapam,+Periyakulam,+Theni"
-                        data-t="bc"></a></div>
+                <p class="and r" data-t="at"></p>
+                <h2 class="sec r" data-t="vn"></h2>
+                <p class="body r" data-t="va"></p>
+                <div class="btns r">
+                    <a class="btn" target="_blank" rel="noopener" href="https://maps.app.goo.gl/C2tkyKpv8eTnB5Yw6"
+                        data-t="bd"></a>
+                    <a class="btn alt" target="_blank" rel="noopener"
+                        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nikkah+-+Abib+Rahuman+%26+Jasima+Barveen&dates=20261025T043000Z/20261025T063000Z&location=Madhina+Masjith,+Quaid-e-Millat+Nagar,+Periyakulam,+Tamil+Nadu+625601"
+                        data-t="bc"></a>
+                </div>
             </div>
         </section>
 
-        <section class="scr"><span class="fl tl"><svg viewBox="0 0 220 220">
+        <!-- 6. With best compliments -->
+        <section class="scr">
+            <span class="fl tl"><svg viewBox="0 0 220 220">
                     <use href="#ca" />
                 </svg></span><span class="fl br2"><svg viewBox="0 0 220 220">
                     <use href="#ca" />
                 </svg></span>
             <div class="z">
-                <div class="hosts">
-                    <div class="r">
-                        <p class="lbl" data-t="ha"></p>
-                        <p class="fm" data-t="han"></p>
-                        <p style="font-size:.9rem" data-t="hap"></p><a class="tel" href="tel:+918667084080">86670
-                            84080</a>
-                    </div>
-                    <div class="r">
-                        <p class="lbl" data-t="hb"></p>
-                        <p class="fm" data-t="hbn"></p>
-                        <p style="font-size:.9rem" data-t="hbp"></p><a class="tel" href="tel:+919751454281">97514
-                            54281</a>
-                    </div>
+                <h2 class="sec r" data-t="wbc" style="font-size:2.2rem"></h2>
+                <div class="r">
+                    <p class="lbl" data-t="l1"></p>
+                    <p class="fm" data-t="m1"></p>
+                    <p class="lbl" data-t="l2"></p>
+                    <p class="fm" data-t="m2"></p>
+                    <p class="lbl" data-t="l3"></p>
+                    <p class="fm" data-t="m3"></p>
                 </div>
                 <svg class="orn">
                     <use href="#orn" />
                 </svg>
-                <h2 class="sec r" data-t="inv2" style="font-size:2rem"></h2>
-                <div class="hosts r">
-                    <div>
-                        <p class="lbl" data-t="l1"></p>
-                        <p class="fm" data-t="m1"></p>
-                    </div>
-                    <div>
-                        <p class="lbl" data-t="l2"></p>
-                        <p class="fm" data-t="m2"></p>
-                    </div>
-                    <div>
-                        <p class="lbl" data-t="l3"></p>
-                        <p class="fm" data-t="m3"></p>
-                    </div>
-                </div>
                 <p class="thx r">جَزَاكُمُ اللَّهُ خَيْرًا</p>
             </div>
         </section>
 
-        <section class="grand" id="grand">
-            <div class="frame"></div>
-            <div class="sp" id="sp"></div>
-            <svg class="star" viewBox="-100 -100 200 200" aria-hidden="true">
-                <g fill="none" stroke="#e3c887" stroke-width=".6">
-                    <rect x="-60" y="-60" width="120" height="120" />
-                    <rect x="-60" y="-60" width="120" height="120" transform="rotate(45)" />
-                    <rect x="-60" y="-60" width="120" height="120" transform="rotate(22.5)" />
-                    <rect x="-60" y="-60" width="120" height="120" transform="rotate(67.5)" />
-                    <circle r="84" />
-                    <circle r="70" />
-                    <circle r="30" />
-                </g>
-            </svg>
-            <span class="fl tl"><svg viewBox="0 0 220 220">
-                    <use href="#ca" />
-                </svg></span>
-            <span class="fl tr"><svg viewBox="0 0 220 220">
-                    <use href="#ca" />
-                </svg></span>
-            <span class="fl bl"><svg viewBox="0 0 220 220">
-                    <use href="#ca" />
-                </svg></span>
-            <span class="fl br2" style="--s:150px"><svg viewBox="0 0 220 220">
-                    <use href="#ca" />
-                </svg></span>
+        <!-- 7. Dua -->
+        <section class="scr" style="min-height:auto;padding-top:70px">
             <div class="z">
-                <svg class="gm" viewBox="-50 -50 100 100">
-                    <use href="#cres" />
-                </svg>
-                <h2 class="gn shine r" data-t="n1"></h2>
-                <span class="amp r">&amp;</span>
-                <h2 class="gn shine r" data-t="n2"></h2>
-                <div class="dline r">✦</div>
-                <p class="gdt r" data-t="gl"></p>
-
-                <div class="glass">
-                    <span class="gleam"></span>
-                    <h3 class="dttl shine r" data-t="dh"></h3>
-                    <p class="dar shine r" style="transition-delay:.15s">بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
-                    <p class="dtr r" style="transition-delay:.3s" data-t="dr"></p>
-                    <div class="dline r" style="transition-delay:.4s">✦</div>
-                    <p class="dmn r" style="transition-delay:.5s" data-t="dm"></p>
+                <div class="glass r">
+                    <h3 class="dttl shine" data-t="dh"></h3>
+                    <p class="dar shine">بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
+                    <p class="dtr" data-t="dr"></p>
+                    <div class="dline">✦</div>
+                    <p style="margin:10px 0 0;font-size:1rem" data-t="dm"></p>
                 </div>
             </div>
-            <div class="svc">
-                <div class="mono r"><span class="shine">MA</span></div>
-                <p class="cr1 r" data-t="cr1"></p>
-                <h3 class="sname shine r">Mohamed Asvath</h3>
-                <span class="role r" data-t="role"></span>
-                <div class="dline r">✦</div>
-                <h4 class="svh shine r" data-t="svh"></h4>
-                <p class="svs r" data-t="svs"></p>
-                <div class="sg">
-                    <div class="sc hot r" style="--d:0s;transition-delay:0s"><i>⚙️</i><div><em data-t="hotb"></em><b data-t="a1"></b><small data-t="a2"></small></div></div>
-                    <div class="sc r" style="--d:0.1s;transition-delay:0.1s"><i>🛒</i><b data-t="b1"></b><small data-t="b2"></small></div>
-                    <div class="sc r" style="--d:0.2s;transition-delay:0.2s"><i>🚀</i><b data-t="c1"></b><small data-t="c2"></small></div>
-                    <div class="sc r" style="--d:0.3s;transition-delay:0.3s"><i>🌐</i><b data-t="d1"></b><small data-t="d2"></small></div>
-                    <div class="sc r" style="--d:0.4s;transition-delay:0.4s"><i>💌</i><b data-t="e1"></b><small data-t="e2"></small></div>
-                    <div class="sc r" style="--d:0.5s;transition-delay:0.5s"><i>🏢</i><b data-t="f1"></b><small data-t="f2"></small></div>
-                    <div class="sc r" style="--d:0.6s;transition-delay:0.6s"><i>📊</i><b data-t="g1"></b><small data-t="g2"></small></div>
-                </div>
-                                <div class="btns r">
-                    <!-- REPLACE 91XXXXXXXXXX with your WhatsApp number (country code + number) -->
-                    <a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/919344790389?text=Hi%20Asvath%2C%20I%20want%20a%20website" data-t="cw"></a>
-                    <a class="btn alt" href="tel:+919344790389" data-t="cc"></a>
-                </div>
-            </div>
-            <div class="cr">© 2026 · Mohamed Asvath · Full Stack Developer</div>
         </section>
+
+        <!-- FOOTER -->
+        <footer class="ft">
+            <div class="fgrid">
+                <div>
+                    <h4 data-t="f1h"></h4>
+                    <p data-t="f1a"></p>
+                    <p data-t="f1b"></p>
+                    <p data-t="f1c"></p>
+                    <p data-t="f1d"></p>
+                </div>
+                <div>
+                    <h4 data-t="f2h"></h4>
+                    <p data-t="f2a"></p>
+                    <p data-t="f2b"></p>
+                    <p data-t="f2c"></p>
+                    <a target="_blank" rel="noopener" href="https://maps.app.goo.gl/C2tkyKpv8eTnB5Yw6" data-t="bd"></a>
+                </div>
+                <div>
+                    <h4 data-t="f3h"></h4>
+                    <a href="#inv" data-t="f3a"></a><a href="#cpl" data-t="f3b"></a><a href="#dt" data-t="f3c"></a><a
+                        href="#ven" data-t="f3d"></a>
+                </div>
+                <div>
+                    <h4 data-t="f4h"></h4>
+                    <p data-t="han"></p><a href="tel:+918667084080">86670 84080</a>
+                    <p data-t="hbn" style="margin-top:10px"></p><a href="tel:+919751454281">97514 54281</a>
+                </div>
+            </div>
+            <div class="fline"></div>
+            <div class="frow">
+                <div>
+                    <p data-t="faddr"></p>
+                    <p class="cp" data-t="fcopy"></p>
+                </div>
+                <div class="chips">
+                    <a href="tel:+918667084080" aria-label="Call">☎</a>
+                    <a target="_blank" rel="noopener" href="https://maps.app.goo.gl/C2tkyKpv8eTnB5Yw6"
+                        aria-label="Map">⌖</a>
+                </div>
+            </div>
+            <div class="wm" data-t="wm"></div>
+            <div class="dev">
+                <p data-t="dev"></p>
+                <span class="dn shine ">Mohamed Asvath</span>
+                <a class="btn" target="_blank" rel="noopener"
+                    href="https://wa.me/919344790389?text=Hi%20Asvath%2C%20I%20saw%20your%20invitation%20design"
+                    data-t="devc"></a>
+            </div>
+        </footer>
     </main>
 
     <script>
@@ -1298,83 +1137,57 @@
             var root = document.documentElement, body = document.body, $ = function (s) { return document.querySelector(s) }, $$ = function (s) { return document.querySelectorAll(s) }, lang = 'en';
             var D = {
                 en: {
-                    h1: 'You are cordially invited to the Nikkah of', n1: 'Abib Rahman', n2: 'Jeshima Parveen', dd: 'Sunday · 25 October 2026 · 10 AM', c3: 'Open Invitation', cue: 'Scroll down',
-                    title: 'Nikkah (Wedding) Invitation', sal: 'Assalamu Alaikum Warahmatullahi Wabarakatuh', lead: 'Dear Beloved,', b1: 'By the abundant grace of Almighty Allah, the Most Gracious and Most Merciful, and by the blessed duas of our beloved Prophet Muhammad (ﷺ), on the 13th of Jamadil Awwal, Hijri 1448,', dl: '(25-10-2026) Sunday', b2: 'between 10:00 AM and 12:00 noon, at the blessed hour',
-                    fg: 'Grandson of A. Mohamed Anifa – (late) Fathimakani, and son of (late) M. Asan Mohamed – Tajnisa Begum, Sekurauthanur, Pudukottai village, Kujiliamparai taluk, Dindigul district — the pious', ng: 'A. Abib Rahman', asg: 'the groom, with',
-                    fb: 'Granddaughter of (late) A. Kamardeen – Sawrabeevi of Vadakarai, Periyakulam, and daughter of K. Thamim Ansari of Quaid-e-Millath Nagar — the pious', nb: 'T. Jeshima Parveen', asb: 'the bride',
-                    sd: 'Save the Date', cm: 'OCTOBER 2026', when: 'Sunday · 10:00 AM – 12:00 PM', hijri: 'Hijri 1448 · Jamadil Awwal 13', ud: 'Days', uh: 'Hours', um: 'Mins', us: 'Secs', done: 'Alhamdulillah – the Nikkah day is today!', dow: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
-                    inv: 'With love, we invite you', v1: 'In sha Allah, as decided by the elders, the Nikkah will be held at Quaid-e-Millath Nagar, Vadakarai, Periyakulam, Theni district,', vn: 'Madina Pallivasal Mandapam', v2: 'Please join us for the Nikkah and the feast that follows, bless the couple and make dua for them.', bd: 'Directions', bc: 'Add to Calendar',
-                    ha: 'With the same request,', han: 'K. Thamim Ansari', hap: 'Vadakarai, Periyakulam, Theni district.', hb: 'Yours sincerely,', hbn: 'M. Asan Mohamed<br>A. Tajnisa Begum', hbp: 'Sekurauthanur.',
-                    inv2: 'Joyfully inviting you', l1: "Bride's brothers:", m1: 'T. Areef Mohamed<br>T. Azarudeen', l2: "Groom's sisters:", m2: 'B. Shaik Mohamed – Rubina Banu<br>A. Sadam Hussain – Rijwana Parveen Banu', l3: 'Little ones:', m3: 'S. Isma, S. Sameena Usena, S. Rayyan',
-                    gl: 'Barakallahu  · Together Forever',
-                    dh: 'Dua for the Newlyweds', dr: 'Barakallahu laka wa baraka alayka, wa jamaa baynakuma fi khayr', dm: 'May Allah bless you, shower His blessings upon you, and unite you both in goodness. Ameen.',
-                    role: 'Full Stack Developer', svh: 'Want a website like this?', svs: 'I build fast, beautiful and secure websites and web apps for your business and your big days.', hotb: 'My speciality',
-                    a1: 'Full-Stack Applications', a2: 'Frontend, backend, database and login. Complete web apps built from scratch.',
-                    b1: 'E-Commerce Websites', b2: 'Online store with products, cart, payments and orders.',
-                    c1: 'Landing Pages', c2: 'Animated pages that win customers.',
-                    d1: 'Custom Domain', d2: 'Your own yourname.com, live on the web.',
-                    e1: 'Nikkah Invitations', e2: 'Animated bilingual invites like this one.',
-                    f1: 'Business Websites', f2: 'Portfolio and company sites that build trust.',
-                    g1: 'Admin Dashboards', g2: 'Manage orders, users and data in one place.',
-                    cw: 'WhatsApp Me', cc: 'Call Now',
-                    cr1: 'Designed & developed by',
-                    s: ['⚙️ Full-Stack Applications', '🛒 E-Commerce Websites', '🚀 Landing Pages', '🌐 Custom Domain', '💌 Nikkah Invitations', '📊 Admin Dashboards'], c: ['Premium UI', 'Smooth Animations', 'Mobile First', 'Fast Delivery', 'Custom Domain', 'Secure and Reliable']
+                    h1: 'You are cordially invited to the Nikkah of', n1: 'Abib Rahuman', n2: 'Jasima Barveen', dd: 'Sunday · 25 October 2026', c3: 'Open Invitation', cue: 'Scroll down',
+                    title: 'Nikkah (Marriage) Invitation', sal: 'Assalamu Alaikum (Warah)',
+                    p1: 'Mr. <b>M. Asan Mohamed</b> – Mrs. <b>A. Thajnisha Begum</b>', and: 'and', p2: 'Mr. <b>K. Tammim Ansari</b>',
+                    inv1: 'we cordially invite you with family and friends on the occasion of the Nikkah (Marriage) of our beloved children',
+                    ng: 'Abib Rahuman', with: '❤️', nb: 'Jasima Barveen',
+                    insha: 'Insha Allah', cm: 'OCTOBER 2026', on: 'on Sunday, 25<sup>th</sup> October 2026 (Hijri 1448)', hijri: 'Jumada al-Awwal Moon 13th Day', time: '10:00 AM – 12:00 PM',
+                    ud: 'Days', uh: 'Hours', um: 'Mins', us: 'Secs', done: 'Alhamdulillah – the Nikkah day is today!', dow: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+                    at: 'at', vn: 'Madhina Masjith', va: 'Quaid-e-Millat Nagar, Periyakulam, Tamil Nadu 625601', bd: 'Directions', bc: 'Add to Calendar',
+                    wbc: 'With best compliments from', l1: "Bride's brothers:", m1: 'T. Areef Mohamed<br>T. Azarudeen', l2: "Groom's sisters:", m2: 'B. Shaik Mohamed – Rubina Banu<br>A. Sadam Hussain – Rijwana Parveen Banu', l3: 'Little ones:', m3: 'S. Isma, S. Sameena Usena, S. Rayyan',
+                    dh: 'Dua for the Newlyweds', dr: 'Barakallahu laka wa baraka alayka, wa jama\'a baynakuma fi khayr', dm: 'May Allah bless you, shower His blessings upon you, and unite you both in goodness. Ameen.',
+                    f1h: 'Nikkah', f1a: 'Sunday, 25 October 2026', f1b: '10:00 AM – 12:00 PM', f1c: 'Hijri 1448', f1d: 'Jumada al-Awwal 13',
+                    f2h: 'Venue', f2a: 'Madhina Masjith', f2b: 'Quaid-e-Millat Nagar', f2c: 'Periyakulam – 625601',
+                    f3h: 'Explore', f3a: 'Invitation', f3b: 'The Couple', f3c: 'Save the Date', f3d: 'Venue',
+                    f4h: 'Contact', han: 'K. Tammim Ansari', hbn: 'M. Asan Mohamed',
+                    faddr: 'Madhina Masjith, Quaid-e-Millat Nagar, Periyakulam, Theni district, Tamil Nadu.', fcopy: 'With prayers &amp; love · 25 October 2026', wm: 'Abib &amp; Jasima', dev: 'Designed &amp; developed by', devc: 'Contact Me'
                 },
                 ta: {
-                    h1: 'நிக்காஹ் நிகழ்வுக்கு உங்களை அன்புடன் அழைக்கிறோம்', n1: 'அபிப் ரகுமான்', n2: 'ஜெஷிமா பர்வின்', dd: 'ஞாயிறு · 25 அக்டோபர் 2026 · காலை 10 மணி', c3: 'அழைப்பிதழைத் திற', cue: 'ஸ்க்ரோல் செய்யவும்',
-                    title: 'நிக்காஹ் (எ) திருமண அழைப்பிதழ்', sal: 'அஸ்ஸலாமு அலைக்கும் வரஹ்மத்துல்லாஹி வபரகாத்தஹூ', lead: 'பேரன்புடையீர் !', b1: 'அளவற்ற அருளாளனும் நிகரற்ற அன்புடையோனுமாகிய எல்லாம் வல்ல அல்லாஹ்வின் பேரருளாலும், எம் பெருமானார் நபிகள் நாயகம் (ஸல்) அவர்களின் துஆ பரக்கத்தாலும் நிகழும் ஹிஜ்ரி 1448-ஆம் ஆண்டு ஜமாதில் அவ்வல் பிறை 13-ஆம் நாள்', dl: '(25-10-2026) ஞாயிற்றுக்கிழமை', b2: 'பகல் 10.00 மணிக்குமேல் 12.00 மணிக்குள் முபாரக்கான வேளையில்',
-                    fg: 'திண்டுக்கல் மாவட்டம், குஜிலியம்பாறை வட்டம், புதுக்கோட்டை கிராமம், சேகுராவுத்தனூர், A. முகமது அனிபா - (மர்ஹூம்) பாத்திமாகனி அவர்களின் மகன்வழிப் பேரனும், (மர்ஹூம்) M. அசன் முகமது – தாஜ்நிசா பேகம் அவர்களின் மகனுமாகிய தீன்குலச்செல்வன்', ng: 'A. அப்பிரகுமான்', asg: 'என்கிற மணமகனுக்கும்',
-                    fb: 'பெரியகுளம், வடகரை, (மர்ஹூம்) A. கமர்தீன் - சவ்ராபீவி அவர்களின் மகள்வழிப் பேத்தியும், காயிதே மில்லத்நகர், K. தமிம் அன்சாரி அவர்களின் மகளுமாகிய தீன்குலச்செல்வி', nb: 'T. ஜெஷிமா பர்வின்', asb: 'என்கிற மணமகளுக்கு',
-                    sd: 'நாள் குறித்துக்கொள்ளுங்கள்', cm: 'அக்டோபர் 2026', when: 'ஞாயிற்றுக்கிழமை · பகல் 10.00 – 12.00', hijri: 'ஹிஜ்ரி 1448 · ஜமாதில் அவ்வல் 13', ud: 'நாட்கள்', uh: 'மணி', um: 'நிமிடம்', us: 'விநாடி', done: 'அல்ஹம்துலில்லாஹ் – நிக்காஹ் நாள் இன்று!', dow: ['ஞா', 'தி', 'செ', 'பு', 'வி', 'வெ', 'ச'],
-                    inv: 'அன்புடன் அழைக்கிறோம்', v1: 'இன்ஷா அல்லாஹ், நிக்காஹ் (திருமணம்) செய்ய பெரியோர்களால் நிச்சயித்தவண்ணம் தேனி மாவட்டம், வடகரை பெரியகுளம் காயிதே மில்லத் நகர்,', vn: 'மதினா பள்ளிவாசல் மண்டபத்தில்', v2: 'நிகழவிருக்கும் நிக்காஹ் உடன் நடைபெறும் விருந்து உபசரிப்பிலும் தாங்கள் வருகைதந்து மணமக்களை வாழ்த்தி துஆ செய்யுமாறு அன்புடன் அழைக்கிறோம்.', bd: 'வழித்தடம்', bc: 'நாள்காட்டியில் சேர்',
-                    ha: 'யாளும் அவ்வண்ணமே கோரும்,', han: 'K. தமிம் அன்சாரி', hap: 'வடகரை, பெரியகுளம், தேனி மாவட்டம்.', hb: 'இங்ஙனம் தங்கள் அன்புள்ள,', hbn: 'M. அசன் முகமது<br>A. தாஜ்நிசா பேகம்', hbp: 'சேகுராவுத்தனூர்.',
-                    inv2: 'அன்புடன் அழைத்து மகிழும்', l1: 'மணமகள் தம்பி :', m1: 'T. ஆரீஃப்முகமது<br>T. அஜார்த்தீன்', l2: 'மணமகன் சகோதரிகள் :', m2: 'B. சேக்முகமது – ரூபினா பானு<br>A. சதாம் உசேன் – ரிஜ்வானா பர்வின் பானு', l3: 'குட்டீஸ் :', m3: 'S. இஸ்மா, S. சமீனா உசேனா, S. ரய்யான்',
-                    gl: 'பாரகல்லாஹு லகுமா · என்றென்றும் இணைந்து',
-                    dh: 'மணமக்களை வாழ்த்தும் துஆ', dr: 'பாரக்கல்லாஹு ல(க்)க வபார(க்)க அலைக்க, வஜமஅ பைனக்குமா ஃபிகைர்', dm: 'பொருள் : அல்லாஹ் உங்கள் இருவருக்கும் அகத்திலும் புறத்திலும் பரகத் செய்வானாக ! மேலும் உங்கள் இருவரையும் நற்காரியங்களில் ஒன்று சேர்ப்பானாக ! ஆமீன் !',
-                    role: 'ஃபுல் ஸ்டாக் டெவலப்பர்', svh: 'இது போன்ற இணையதளம் வேண்டுமா?', svs: 'உங்கள் வணிகத்திற்கும் சிறப்பு நாட்களுக்கும் வேகமான, அழகான, பாதுகாப்பான இணையதளங்களை உருவாக்குகிறேன்.', hotb: 'என் சிறப்பு',
-                    a1: 'Full-Stack செயலிகள்', a2: 'ஃப்ரண்ட்எண்ட், பேக்எண்ட், டேட்டாபேஸ், லாகின் உடன் முழுமையான வெப் செயலிகள்.',
-                    b1: 'இ-காமர்ஸ் இணையதளங்கள்', b2: 'பொருட்கள், கார்ட், பேமெண்ட், ஆர்டர் உடன் ஆன்லைன் கடை.',
-                    c1: 'லேண்டிங் பக்கங்கள்', c2: 'வாடிக்கையாளர்களை ஈர்க்கும் அனிமேஷன் பக்கங்கள்.',
-                    d1: 'சொந்த டொமைன்', d2: 'உங்கள் சொந்த yourname.com இணையத்தில்.',
-                    e1: 'திருமண அழைப்பிதழ்கள்', e2: 'இது போன்ற அனிமேஷன் இருமொழி அழைப்பிதழ்கள்.',
-                    f1: 'வணிக இணையதளங்கள்', f2: 'நம்பிக்கை தரும் நிறுவன, போர்ட்ஃபோலியோ தளங்கள்.',
-                    g1: 'அட்மின் டாஷ்போர்டு', g2: 'ஆர்டர், பயனர், தரவுகளை ஒரே இடத்தில் நிர்வகிக்க.',
-                    cw: 'வாட்ஸ்அப்பில் பேசுங்கள்', cc: 'அழைக்க',
-                    cr1: 'வடிவமைத்து உருவாக்கியவர்',
-                    s: ['⚙️ Full-Stack செயலிகள்', '🛒 இ-காமர்ஸ் தளங்கள்', '🚀 லேண்டிங் பக்கங்கள்', '🌐 சொந்த டொமைன்', '💌 திருமண அழைப்பிதழ்கள்', '📊 அட்மின் டாஷ்போர்டு'], c: ['பிரீமியம் வடிவமைப்பு', 'மென்மையான அனிமேஷன்', 'மொபைல் முதன்மை', 'விரைவான டெலிவரி', 'சொந்த டொமைன்', 'பாதுகாப்பான, நம்பகமான']
+                    h1: 'நிக்காஹ் நிகழ்வுக்கு உங்களை அன்புடன் அழைக்கிறோம்', n1: 'அபிப் ரகுமான்', n2: 'ஜெஷிமா பர்வின்', dd: 'ஞாயிறு · 25 அக்டோபர் 2026', c3: 'அழைப்பிதழைத் திற', cue: 'ஸ்க்ரோல் செய்யவும்',
+                    title: 'நிக்காஹ் (எ) திருமண அழைப்பிதழ்', sal: 'அஸ்ஸலாமு அலைக்கும் (வரஹ்)',
+                    p1: '<b>M. அசன் முகமது</b> (மர்ஹூம்) – <b>A. தாஜ்நிசா பேகம்</b>', and: 'மற்றும்', p2: '<b>K. தமிம் அன்சாரி</b>',
+                    inv1: 'ஆகிய நாங்கள், எங்கள் அன்புச் செல்வங்களின் நிக்காஹ் (திருமணம்) நிகழ்வில் குடும்பத்தினர், நண்பர்களுடன் கலந்துகொள்ள உங்களை அன்புடன் அழைக்கிறோம்.',
+                    ng: 'A. அபிப் ரகுமான்', with: 'உடன்', nb: 'T. ஜெஷிமா பர்வின்',
+                    insha: 'இன்ஷா அல்லாஹ்', cm: 'அக்டோபர் 2026', on: '25-10-2026 ஞாயிற்றுக்கிழமை (ஹிஜ்ரி 1448)', hijri: 'ஜமாதில் அவ்வல் பிறை 13', time: 'பகல் 10.00 – 12.00',
+                    ud: 'நாட்கள்', uh: 'மணி', um: 'நிமிடம்', us: 'விநாடி', done: 'அல்ஹம்துலில்லாஹ் – நிக்காஹ் நாள் இன்று!', dow: ['ஞா', 'தி', 'செ', 'பு', 'வி', 'வெ', 'ச'],
+                    at: 'நடைபெறும் இடம்', vn: 'மதினா பள்ளிவாசல்', va: 'காயிதே மில்லத் நகர், பெரியகுளம், தமிழ்நாடு 625601', bd: 'வழித்தடம்', bc: 'நாள்காட்டியில் சேர்',
+                    wbc: 'அன்புடன் அழைத்து மகிழும்', l1: 'மணமகள் தம்பிகள் :', m1: 'T. ஆரீஃப் முகமது<br>T. அஜார்த்தீன்', l2: 'மணமகன் சகோதரிகள் :', m2: 'B. சேக் முகமது – ரூபினா பானு<br>A. சதாம் உசேன் – ரிஜ்வானா பர்வின் பானு', l3: 'குட்டீஸ் :', m3: 'S. இஸ்மா, S. சமீனா உசேனா, S. ரய்யான்',
+                    dh: 'மணமக்களை வாழ்த்தும் துஆ', dr: 'பாரக்கல்லாஹு லக வபாரக அலைக்க, வஜமஅ பைனக்குமா ஃபீ கைர்', dm: 'பொருள் : அல்லாஹ் உங்கள் இருவருக்கும் பரகத் செய்வானாக! உங்கள் இருவரையும் நன்மையில் ஒன்று சேர்ப்பானாக! ஆமீன்!',
+                    f1h: 'நிக்காஹ்', f1a: 'ஞாயிறு, 25 அக்டோபர் 2026', f1b: 'பகல் 10.00 – 12.00', f1c: 'ஹிஜ்ரி 1448', f1d: 'ஜமாதில் அவ்வல் 13',
+                    f2h: 'இடம்', f2a: 'மதினா பள்ளிவாசல்', f2b: 'காயிதே மில்லத் நகர்', f2c: 'பெரியகுளம் – 625601',
+                    f3h: 'பக்கங்கள்', f3a: 'அழைப்பிதழ்', f3b: 'மணமக்கள்', f3c: 'நாள் குறித்துக்கொள்ளுங்கள்', f3d: 'இடம்',
+                    f4h: 'தொடர்புக்கு', han: 'K. தமிம் அன்சாரி', hbn: 'M. அசன் முகமது',
+                    faddr: 'மதினா பள்ளிவாசல், காயிதே மில்லத் நகர், பெரியகுளம், தேனி மாவட்டம், தமிழ்நாடு.', fcopy: 'துஆவுடன் அன்புடன் · 25 அக்டோபர் 2026', wm: 'அபிப் &amp; ஜெஷிமா', dev: 'வடிவமைத்து உருவாக்கியவர்', devc: 'தொடர்பு கொள்ள'
                 }
             };
-            function mq(id, a, c) { var h = a.map(function (x) { return '<span class="chip">' + (c ? '✦ ' : '') + x + '</span>' }).join(''); $(id).innerHTML = '<div class="trk">' + h + h + '</div>' }
             function cal() { var h = '', n, f = new Date(2026, 9, 1).getDay(); D[lang].dow.forEach(function (d) { h += '<span class="w">' + d + '</span>' }); for (n = 0; n < f; n++)h += '<span></span>'; for (n = 1; n <= 31; n++)h += '<span class="d' + (n == 25 ? ' hit' : '') + '">' + n + '</span>'; $('#gr').innerHTML = h }
             function apply(l) { lang = l; root.lang = l; var d = D[l]; $$('[data-t]').forEach(function (el) { el.innerHTML = d[el.getAttribute('data-t')] }); $$('.lang button').forEach(function (b) { b.classList.toggle('on', b.dataset.l === l) }); cal() }
             $$('.lang button').forEach(function (b) { b.onclick = function () { apply(b.dataset.l) } }); apply('en');
-            var sp = $('#sp'), i, e; for (i = 0; i < 30; i++) { e = document.createElement('i'); e.className = 'st'; e.style.cssText = 'left:' + Math.random() * 100 + '%;top:' + Math.random() * 100 + '%;--w:' + (4 + Math.random() * 9) + 'px;--t:' + (2 + Math.random() * 4) + 's;--dl:' + (-Math.random() * 5) + 's'; sp.appendChild(e) }
+
             var target = new Date('2026-10-25T10:00:00+05:30').getTime(), c = {}; $$('[data-u]').forEach(function (b) { c[b.dataset.u] = b });
             function p(v) { return v < 10 ? '0' + v : '' + v }
             function tick() { var d = target - Date.now(); if (d <= 0) { $('#count').innerHTML = '<p style="grid-column:1/-1;margin:0;color:#e3c887;font-weight:600">' + D[lang].done + '</p>'; return false } var s = Math.floor(d / 1000); c.d.textContent = p(Math.floor(s / 86400)); c.h.textContent = p(Math.floor(s % 86400 / 3600)); c.m.textContent = p(Math.floor(s % 3600 / 60)); c.s.textContent = p(s % 60); return true }
             if (tick()) { var tm = setInterval(function () { if (!tick()) clearInterval(tm) }, 1000) }
 
-            /* footer scroll-linked effect */
-            var gs = $('#grand'), gt = 0;
-            function gp() { var r = gs.getBoundingClientRect(); gs.style.setProperty('--p', Math.min(1, Math.max(0, (innerHeight - r.top) / (innerHeight * .9))).toFixed(3)) }
-            addEventListener('scroll', function () { if (gt) return; gt = requestAnimationFrame(function () { gt = 0; gp() }) }, { passive: true }); gp();
-
-            /* lenis-style smooth scroll (desktop wheel) */
-            if (!matchMedia('(pointer:coarse),(prefers-reduced-motion:reduce)').matches) {
-                root.classList.add('lenis');
-                var cur = 0, tgt = 0, raf = 0;
-                var lim = function (v) { return Math.max(0, Math.min(root.scrollHeight - innerHeight, v)) };
-                var loop = function () { cur += (tgt - cur) * .09; if (Math.abs(tgt - cur) < .4) { cur = tgt; raf = 0 } scrollTo(0, cur); if (raf) raf = requestAnimationFrame(loop) };
-                var go = function (t) { if (!raf) { cur = scrollY; raf = requestAnimationFrame(loop) } tgt = lim(t) };
-                addEventListener('wheel', function (e) { if (body.classList.contains('lock') || e.ctrlKey) return; e.preventDefault(); go((raf ? tgt : scrollY) + e.deltaY * (e.deltaMode === 1 ? 32 : 1)) }, { passive: false });
-                $$('a[href^="#"]').forEach(function (a) { a.addEventListener('click', function (ev) { var t = $(a.getAttribute('href')); if (t) { ev.preventDefault(); go(t.getBoundingClientRect().top + scrollY) } }) });
-            }
-
             var tk = 0; addEventListener('scroll', function () { if (tk) return; tk = requestAnimationFrame(function () { tk = 0; var h = root.scrollHeight - innerHeight; $('#bar').style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')' }) }, { passive: true });
+
             $('#open').onclick = function () {
                 var cv = $('#cover'); scrollTo(0, 0); root.classList.add('js'); cv.classList.add('open'); body.classList.remove('lock');
                 setTimeout(function () {
-                    var t = $$('.r'); if (!('IntersectionObserver' in window)) { t.forEach(function (x) { x.classList.add('in') }) } else { var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target) } }) }, { threshold: .15 }); t.forEach(function (x) { io.observe(x) }) }
+                    var t = $$('.r');
+                    if (!('IntersectionObserver' in window)) { t.forEach(function (x) { x.classList.add('in') }) }
+                    else { var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target) } }) }, { threshold: .15 }); t.forEach(function (x) { io.observe(x) }) }
                     if (!matchMedia('(prefers-reduced-motion: reduce)').matches) { var w = $('#pt'); for (var q = 0; q < 12; q++) { var el = document.createElement('i'); el.className = 'pe'; el.style.cssText = 'left:' + Math.random() * 100 + '%;--w:' + (8 + Math.random() * 10) + 'px;--t:' + (12 + Math.random() * 12) + 's;--dl:' + (-Math.random() * 20) + 's;--x:' + ((Math.random() - .5) * 160) + 'px'; w.appendChild(el) } }
                 }, 350);
                 setTimeout(function () { cv.style.display = 'none' }, 1600)
