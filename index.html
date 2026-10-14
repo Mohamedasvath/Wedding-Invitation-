@@ -8,15 +8,26 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Amiri&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Great+Vibes&family=Noto+Serif+Tamil:wght@400;600;700&display=swap"
         rel="stylesheet">
+    <link rel="icon" type="image/png"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBaKqnAO41n8TjEpztGd0s8q8XRf1y8M7O5xRcE95X7HmBhefEzGQXK2s&s=10">
+    <meta name="theme-color" content="#0c2a26">
     <style>
+        /* ===== Emerald & Champagne theme ===== */
         :root {
-            --cr: #f6ecdc;
-            --cr2: #efe0c8;
-            --go: #b8924a;
-            --gl: #e6c97f;
-            --br: #7b4a2c;
-            --ink: #5a463c;
-            --dk: #2a0f10;
+            --cr: #0c2a26;
+            /* deep emerald */
+            --cr2: #14403a;
+            /* lighter emerald */
+            --go: #e3c887;
+            /* champagne gold */
+            --gl: #fff6d8;
+            /* light gold */
+            --br: #e3c887;
+            /* headings */
+            --ink: #fbf4e4;
+            /* ivory body text */
+            --dk: #071a17;
+            /* darkest green */
             --la: 'Cormorant Garamond', Georgia, serif;
             --ta: 'Noto Serif Tamil', Georgia, serif;
             --sc: 'Great Vibes', cursive;
@@ -35,9 +46,13 @@
             scroll-padding-top: env(safe-area-inset-top, 0px)
         }
 
+        html.lenis {
+            scroll-behavior: auto
+        }
+
         body {
             margin: 0;
-            background: #e6d6bd;
+            background: #04120f;
             color: var(--ink);
             font: 1.1rem/1.65 var(--la);
             -webkit-font-smoothing: antialiased
@@ -56,7 +71,9 @@
             margin: 0 auto;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(180deg, var(--cr), var(--cr2) 50%, var(--cr))
+            background:
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='none' stroke='%23e3c887' stroke-width='.6' opacity='.13'%3E%3Crect x='18' y='18' width='24' height='24'/%3E%3Crect x='18' y='18' width='24' height='24' transform='rotate(45 30 30)'/%3E%3C/g%3E%3C/svg%3E"),
+                linear-gradient(180deg, var(--cr), var(--cr2) 50%, var(--cr))
         }
 
         @media(min-width:640px) {
@@ -66,7 +83,7 @@
 
             .sheet {
                 border-radius: 26px;
-                box-shadow: 0 30px 80px -20px rgba(60, 30, 10, .4), 0 0 0 8px #fffaf0, 0 0 0 9px var(--go)
+                box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .7), 0 0 0 8px #0a211e, 0 0 0 9px var(--go)
             }
         }
 
@@ -93,7 +110,7 @@
             left: 0;
             height: 3px;
             width: 100%;
-            background: linear-gradient(90deg, var(--gl), #d98d8d);
+            background: linear-gradient(90deg, var(--go), #4fc3a8);
             transform-origin: 0 0;
             transform: scaleX(0);
             z-index: 70
@@ -107,7 +124,9 @@
             display: flex;
             padding: 3px;
             border-radius: 99px;
-            background: rgba(42, 15, 16, .88);
+            background: rgba(7, 26, 23, .88);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
             border: 1px solid var(--go)
         }
 
@@ -115,7 +134,7 @@
             font: 600 .85rem var(--la);
             border: 0;
             background: none;
-            color: var(--gl);
+            color: var(--go);
             padding: 5px 14px;
             border-radius: 99px;
             cursor: pointer
@@ -126,11 +145,36 @@
             color: var(--dk)
         }
 
+        /* gold shine text */
+        .shine,
+        .nm,
+        .sec,
+        .pn,
+        .title,
+        .bis,
+        .thx {
+            background: linear-gradient(110deg, #a98334 0%, #e3c887 22%, #fff6d8 38%, #e3c887 52%, #a98334 72%, #e9d596 100%) 0 0/250% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gs 5s linear infinite
+        }
+
+        .shine {
+            filter: drop-shadow(0 2px 10px rgba(227, 200, 135, .3))
+        }
+
+        @keyframes gs {
+            to {
+                background-position: -250% 0
+            }
+        }
+
         /* frame */
         .frame {
             position: absolute;
             inset: 14px;
-            border: 1.5px solid var(--go);
+            border: 1.5px solid rgba(227, 200, 135, .65);
             border-radius: 150px 150px 10px 10px;
             pointer-events: none;
             z-index: 2
@@ -140,7 +184,7 @@
             content: "";
             position: absolute;
             inset: 6px;
-            border: .5px solid rgba(184, 146, 74, .5);
+            border: .5px solid rgba(227, 200, 135, .3);
             border-radius: 145px 145px 6px 6px
         }
 
@@ -201,7 +245,8 @@
             width: 64px;
             z-index: 4;
             transform-origin: 50% 0;
-            animation: swing 5s ease-in-out infinite alternate
+            animation: swing 5s ease-in-out infinite alternate;
+            filter: drop-shadow(0 0 12px rgba(227, 200, 135, .5))
         }
 
         @keyframes swing {
@@ -223,7 +268,7 @@
             place-items: center;
             text-align: center;
             padding: 30px 36px;
-            background: radial-gradient(circle at 50% 35%, #fff8ea, var(--cr2));
+            background: radial-gradient(circle at 50% 35%, #1b5249, var(--cr) 60%, var(--dk));
             transition: opacity 1.1s, transform 1.4s cubic-bezier(.7, 0, .2, 1), visibility 0s 1.4s;
             overflow: hidden
         }
@@ -242,7 +287,6 @@
 
         .bis {
             font: 2rem/1.6 var(--ar);
-            color: var(--br);
             margin: 0
         }
 
@@ -261,8 +305,7 @@
 
         .nm {
             display: block;
-            font: 400 4rem/1.05 var(--sc);
-            color: var(--br)
+            font: 400 4rem/1.05 var(--sc)
         }
 
         html[lang=ta] .nm {
@@ -299,7 +342,7 @@
             font-size: .88rem;
             text-transform: uppercase;
             margin: 12px 0 0;
-            color: var(--br)
+            color: var(--go)
         }
 
         html[lang=ta] .dt {
@@ -312,8 +355,8 @@
             font: 600 .8rem var(--la);
             letter-spacing: .24em;
             text-transform: uppercase;
-            color: var(--br);
-            background: rgba(255, 255, 255, .4);
+            color: var(--go);
+            background: rgba(255, 255, 255, .06);
             border: 1.5px solid var(--go);
             border-radius: 99px;
             padding: 13px 32px;
@@ -329,7 +372,7 @@
 
         @keyframes glow {
             to {
-                box-shadow: 0 0 26px rgba(184, 146, 74, .7)
+                box-shadow: 0 0 26px rgba(227, 200, 135, .6)
             }
         }
 
@@ -375,7 +418,6 @@
         /* text */
         .title {
             font: 600 1.65rem/1.4 var(--la);
-            color: var(--br);
             margin: 8px 0
         }
 
@@ -410,7 +452,6 @@
 
         .sec {
             font: 2.6rem/1.2 var(--sc);
-            color: var(--br);
             margin: 0 0 10px
         }
 
@@ -420,7 +461,6 @@
 
         .pn {
             font: italic 600 2rem/1.3 var(--la);
-            color: var(--br);
             margin: 4px 0
         }
 
@@ -443,9 +483,11 @@
             max-width: 320px;
             margin: 6px auto 14px;
             padding: 16px 14px;
-            border: 1.5px solid var(--go);
+            border: 1.5px solid rgba(227, 200, 135, .7);
             border-radius: 110px 110px 12px 12px;
-            background: rgba(255, 252, 246, .6)
+            background: rgba(255, 255, 255, .05);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px)
         }
 
         .cal h3 {
@@ -471,12 +513,12 @@
             aspect-ratio: 1;
             display: grid;
             place-items: center;
-            opacity: .8
+            opacity: .85
         }
 
         .gr .hit {
             position: relative;
-            color: #fff;
+            color: var(--cr);
             opacity: 1;
             font-weight: 700;
             z-index: 0
@@ -487,7 +529,7 @@
             position: absolute;
             inset: -2px;
             border-radius: 50%;
-            background: radial-gradient(circle at 35% 30%, #c9a45c, #8a5a22);
+            background: radial-gradient(circle at 35% 30%, #fff1b8, #b99443);
             z-index: -1;
             animation: pulse 2s infinite
         }
@@ -508,9 +550,11 @@
 
         .count div {
             padding: 10px 2px 6px;
-            border: 1px solid var(--go);
+            border: 1px solid rgba(227, 200, 135, .7);
             border-radius: 40px 40px 6px 6px;
-            background: rgba(255, 255, 255, .5)
+            background: rgba(255, 255, 255, .06);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px)
         }
 
         .count b {
@@ -535,16 +579,16 @@
         .btn {
             font: 600 .9rem var(--la);
             text-decoration: none;
-            color: var(--cr);
-            background: var(--br);
+            color: var(--dk);
+            background: linear-gradient(135deg, #f3dfa6, #b99443);
             padding: 10px 22px;
             border-radius: 99px;
-            border: 1px solid var(--br)
+            border: 1px solid var(--go)
         }
 
         .btn.alt {
             background: transparent;
-            color: var(--br)
+            color: var(--go)
         }
 
         .tel {
@@ -583,42 +627,277 @@
 
         .thx {
             font: 1.7rem var(--ar);
-            color: var(--br);
             margin: 18px 0 0
         }
 
-        /* grand footer */
-   .grand{position:relative;padding:96px 28px 0;text-align:center;overflow:hidden;
-  background:linear-gradient(180deg,var(--cr),var(--cr2) 60%,#e4cfa8)}
-.grand .frame{inset:14px}
-.grand>.z{position:relative;z-index:3}
-.gm{width:54px;margin:0 auto 4px;filter:drop-shadow(0 0 8px rgba(184,146,74,.45));animation:swing 6s ease-in-out infinite alternate}
-.gd{font:1.7rem var(--ar);color:var(--br);margin:0 0 6px}
-.gn{font:400 3.4rem/1.1 var(--sc);color:var(--br);margin:0;display:block}
-html[lang=ta] .gn{font:700 1.7rem/1.7 var(--ta)}
-.grand .amp{font:italic 2.2rem/1 var(--la);color:var(--go);display:block;margin:2px 0}
-.gdt{font-size:1rem;font-style:italic;letter-spacing:.05em;color:var(--br);margin:14px 0 6px}
-html[lang=ta] .gdt{font-style:normal;letter-spacing:0}
+        /* footer */
+        .grand {
+            --ch: #e3c887;
+            --iv: #fbf4e4;
+            --p: 0;
+            position: relative;
+            padding: 110px 26px 0;
+            text-align: center;
+            overflow: hidden;
+            color: var(--iv);
+            background: radial-gradient(ellipse at 50% 0, #14403a, #0c2a26 62%, #071a17);
+            border-top: 1.5px solid #b99443
+        }
 
-.row{position:relative;z-index:3;overflow:hidden;margin:10px 20px;
-  -webkit-mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
-  mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
-.trk{display:flex;width:max-content;animation:mq 28s linear infinite}
-.row.rv .trk{animation-direction:reverse}
-@keyframes mq{to{transform:translateX(-50%)}}
-.chip{margin-right:12px;padding:9px 20px;border-radius:99px;white-space:nowrap;color:var(--br);
-  border:1px solid var(--go);background:rgba(255,252,246,.6)}
+        .grand::before {
+            content: "";
+            position: absolute;
+            inset: -20%;
+            pointer-events: none;
+            background: radial-gradient(circle at 30% 20%, rgba(227, 200, 135, .16), transparent 38%), radial-gradient(circle at 75% 70%, rgba(60, 160, 140, .16), transparent 40%);
+            animation: aur 14s ease-in-out infinite alternate
+        }
 
-.sp{position:absolute;inset:0;pointer-events:none}
-.st{position:absolute;width:var(--w);height:var(--w);background:var(--go);opacity:.25;
-  clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);
-  animation:tw var(--t) ease-in-out infinite;animation-delay:var(--dl)}
-@keyframes tw{50%{opacity:.9;transform:scale(1.3) rotate(25deg)}}
+        @keyframes aur {
+            to {
+                transform: translate3d(6%, 4%, 0) scale(1.12)
+            }
+        }
 
-.cr{position:relative;z-index:3;margin:40px -14px 0;padding:22px 24px calc(34px + env(safe-area-inset-bottom,0px))}
-.cr small{display:block;font-size:.9rem;font-style:italic;color:var(--br)}
-.cr strong{display:block;font:2.1rem var(--sc);color:var(--go)}
-.cr span{font:600 .85rem var(--la);letter-spacing:.06em;color:var(--br)}
+        .grand .fl {
+            translate: 0 calc((1 - var(--p)) * 40px);
+            opacity: .95
+        }
+
+        .grand>.z {
+            position: relative;
+            z-index: 3
+        }
+
+        .star {
+            position: absolute;
+            left: 50%;
+            top: 360px;
+            width: 560px;
+            max-width: 160%;
+            translate: -50% 0;
+            opacity: .17;
+            pointer-events: none;
+            z-index: 1;
+            animation: spin 70s linear infinite
+        }
+
+        @keyframes spin {
+            to {
+                rotate: 360deg
+            }
+        }
+
+        .gm {
+            width: 56px;
+            margin: 0 auto 10px;
+            filter: drop-shadow(0 0 12px rgba(227, 200, 135, .6));
+            animation: swing 6s ease-in-out infinite alternate
+        }
+
+        .gn {
+            font: 400 3.4rem/1.1 var(--sc);
+            margin: 0;
+            display: block
+        }
+
+        html[lang=ta] .gn {
+            font: 700 1.7rem/1.7 var(--ta)
+        }
+
+        .gdt {
+            font-size: 1rem;
+            font-style: italic;
+            letter-spacing: .05em;
+            color: rgba(251, 244, 228, .8);
+            margin: 12px 0 0
+        }
+
+        html[lang=ta] .gdt {
+            font-style: normal;
+            letter-spacing: 0
+        }
+
+        .glass {
+            position: relative;
+            overflow: hidden;
+            max-width: 380px;
+            margin: 34px auto 0;
+            padding: 52px 22px 30px;
+            border-radius: 160px 160px 20px 20px;
+            background: linear-gradient(150deg, rgba(255, 255, 255, .14), rgba(255, 255, 255, .03));
+            -webkit-backdrop-filter: blur(16px) saturate(1.4);
+            backdrop-filter: blur(16px) saturate(1.4);
+            border: 1px solid rgba(227, 200, 135, .55);
+            box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .6), inset 0 1px 0 rgba(255, 255, 255, .25), inset 0 0 0 6px rgba(227, 200, 135, .06);
+            transform: translateY(calc((1 - var(--p)) * 50px)) scale(calc(.93 + var(--p) * .07))
+        }
+
+        .gleam {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 40%;
+            pointer-events: none;
+            background: linear-gradient(105deg, transparent, rgba(255, 255, 255, .22), transparent);
+            transform: translateX(calc(var(--p) * 330% - 100%)) skewX(-18deg)
+        }
+
+        .dttl {
+            font: 2.3rem/1.2 var(--sc);
+            margin: 0 0 6px
+        }
+
+        html[lang=ta] .dttl {
+            font: 700 1.3rem/1.6 var(--ta)
+        }
+
+        .dar {
+            font: 2rem/1.9 var(--ar);
+            margin: 6px 0 8px
+        }
+
+        .dtr {
+            font-style: italic;
+            font-size: .95rem;
+            letter-spacing: .03em;
+            color: rgba(251, 244, 228, .75);
+            margin: 0 0 6px
+        }
+
+        html[lang=ta] .dtr {
+            font-style: normal;
+            letter-spacing: 0
+        }
+
+        .dmn {
+            font-size: 1.02rem;
+            line-height: 1.85;
+            color: var(--iv);
+            margin: 10px 0 0
+        }
+
+        .row {
+            position: relative;
+            z-index: 3;
+            overflow: hidden;
+            margin: 10px -26px;
+            -webkit-mask: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+            mask: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)
+        }
+
+        #r1 {
+            margin-top: 44px
+        }
+
+        .trk {
+            display: flex;
+            width: max-content;
+            animation: mq 28s linear infinite
+        }
+
+        .row.rv .trk {
+            animation-direction: reverse
+        }
+
+        @keyframes mq {
+            to {
+                transform: translateX(-50%)
+            }
+        }
+
+        .chip {
+            margin-right: 12px;
+            padding: 9px 20px;
+            border-radius: 99px;
+            white-space: nowrap;
+            color: var(--iv);
+            border: 1px solid rgba(227, 200, 135, .6);
+            background: rgba(255, 255, 255, .07);
+            -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px)
+        }
+
+        .sp {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1
+        }
+
+        .st {
+            position: absolute;
+            width: var(--w);
+            height: var(--w);
+            background: var(--ch);
+            opacity: .25;
+            clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%);
+            animation: tw var(--t) ease-in-out infinite, dr calc(var(--t) * 4) ease-in-out infinite alternate;
+            animation-delay: var(--dl)
+        }
+
+        @keyframes tw {
+            50% {
+                opacity: .95;
+                transform: scale(1.3) rotate(25deg)
+            }
+        }
+
+        @keyframes dr {
+            to {
+                translate: 0 -46px
+            }
+        }
+
+
+
+        /* ===== services showcase ===== */
+        .svc{position:relative;z-index:3;margin-top:70px}
+        .mono{position:relative;width:84px;height:84px;margin:0 auto 12px;display:grid;place-items:center}
+        .mono::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(#b99443,#fff6d8,#b99443,#fff6d8,#b99443);animation:spin 6s linear infinite}
+        .mono::after{content:"";position:absolute;inset:3px;border-radius:50%;background:radial-gradient(circle at 35% 25%,#1b5249,#071a17)}
+        .mono span{position:relative;z-index:2;font:2.2rem/1 var(--sc)}
+        .cr1{font-size:.9rem;font-style:italic;color:rgba(251,244,228,.7);margin:0}
+        .sname{font:3rem/1.15 var(--sc);margin:0}
+        .role{display:inline-block;margin:4px 0 0;padding:5px 18px;border:1px solid rgba(227,200,135,.7);border-radius:99px;
+          font:600 .8rem var(--la);letter-spacing:.2em;text-transform:uppercase;color:var(--ch);background:rgba(255,255,255,.06)}
+        html[lang=ta] .role{letter-spacing:0;text-transform:none;font:600 .85rem var(--ta)}
+        .svh{font:2.4rem/1.2 var(--sc);margin:6px 0 4px}
+        html[lang=ta] .svh{font:700 1.35rem/1.6 var(--ta)}
+        .svs{max-width:34ch;margin:0 auto;color:rgba(251,244,228,.85);font-size:1rem}
+        .sg{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:400px;margin:24px auto 0;text-align:center}
+        .sc{position:relative;overflow:hidden;padding:18px 12px 16px;border-radius:44px 44px 14px 14px;
+          background:linear-gradient(150deg,rgba(255,255,255,.12),rgba(255,255,255,.03));
+          -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+          border:1px solid rgba(227,200,135,.5);box-shadow:0 14px 30px -14px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.18);
+          transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .4s,border-color .4s}
+        .sc::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;pointer-events:none;
+          background:linear-gradient(105deg,transparent,rgba(255,255,255,.2),transparent);transform:skewX(-18deg);
+          animation:sw 6s ease-in-out infinite;animation-delay:var(--d,0s)}
+        @keyframes sw{0%,55%{left:-60%}100%{left:130%}}
+        .sc i{display:grid;place-items:center;width:46px;height:46px;margin:0 auto 8px;border-radius:50%;font-style:normal;font-size:1.35rem;
+          background:radial-gradient(circle at 35% 30%,#fff1b8,#b99443);box-shadow:0 0 18px rgba(227,200,135,.45);
+          animation:fy 4s ease-in-out infinite alternate;animation-delay:var(--d,0s)}
+        @keyframes fy{to{transform:translateY(-4px)}}
+        .sc b{display:block;font:700 1rem/1.3 var(--la);color:var(--ch);margin-bottom:3px}
+        html[lang=ta] .sc b{font:700 .85rem/1.5 var(--ta)}
+        .sc small{display:block;font-size:.82rem;line-height:1.45;color:rgba(251,244,228,.8)}
+        html[lang=ta] .sc small{font-size:.72rem;line-height:1.7}
+        .sc.hot{grid-column:1/-1;display:flex;align-items:center;gap:14px;text-align:left;padding:20px 18px;border-radius:70px 70px 16px 16px;
+          border:1.5px solid var(--ch);background:linear-gradient(150deg,rgba(227,200,135,.22),rgba(255,255,255,.04));animation:hotg 3.2s ease-in-out infinite alternate}
+        @keyframes hotg{to{box-shadow:0 0 30px rgba(227,200,135,.45),0 14px 30px -14px rgba(0,0,0,.6)}}
+        .sc.hot i{flex:none;width:58px;height:58px;font-size:1.7rem;margin:0}
+        .sc.hot b{font-size:1.2rem}
+        .sc.hot em{display:inline-block;margin-bottom:4px;padding:2px 12px;border-radius:99px;font:600 .68rem var(--la);letter-spacing:.14em;text-transform:uppercase;
+          font-style:normal;color:var(--dk);background:linear-gradient(135deg,#f3dfa6,#b99443)}
+        html[lang=ta] .sc.hot em{letter-spacing:0;text-transform:none;font:600 .7rem var(--ta)}
+        .js .r.in.sc:hover{transform:translateY(-5px);border-color:var(--ch);box-shadow:0 20px 36px -14px rgba(0,0,0,.7),0 0 22px rgba(227,200,135,.3)}
+        .svc .row{margin-top:30px}
+        .svc .btns{margin-top:22px}
+        .btn.wa{padding:12px 26px;font-size:1rem;box-shadow:0 0 22px rgba(227,200,135,.4);animation:glow 2.6s ease-in-out infinite alternate}
+        .cr{position:relative;z-index:3;margin:40px -26px 0;padding:20px 24px calc(30px + env(safe-area-inset-bottom,0px));border-top:1px solid rgba(227,200,135,.3);background:rgba(0,0,0,.28);text-align:center;font-size:.85rem;color:rgba(251,244,228,.65)}
+
         /* motion */
         .js .r {
             opacity: 0;
@@ -647,8 +926,8 @@ html[lang=ta] .gdt{font-style:normal;letter-spacing:0}
             width: var(--w);
             height: calc(var(--w)*1.25);
             border-radius: 70% 0 70% 0;
-            background: linear-gradient(135deg, #fff, #f0d6c8);
-            opacity: .6;
+            background: linear-gradient(135deg, #fff6d8, #e3c887);
+            opacity: .4;
             animation: fall var(--t) linear infinite;
             animation-delay: var(--dl)
         }
@@ -700,9 +979,9 @@ html[lang=ta] .gdt{font-style:normal;letter-spacing:0}
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
         <defs>
             <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#ecd48e" />
-                <stop offset=".5" stop-color="#b8924a" />
-                <stop offset="1" stop-color="#ecd48e" />
+                <stop offset="0" stop-color="#f3dfa6" />
+                <stop offset=".5" stop-color="#b99443" />
+                <stop offset="1" stop-color="#f3dfa6" />
             </linearGradient>
             <mask id="cm">
                 <rect x="-50" y="-50" width="100" height="100" fill="#fff" />
@@ -710,15 +989,15 @@ html[lang=ta] .gdt{font-style:normal;letter-spacing:0}
             </mask>
             <symbol id="cres" viewBox="-50 -50 100 100">
                 <circle r="36" fill="url(#gg)" mask="url(#cm)" />
-                <path d="M26-2l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#ecd48e" />
+                <path d="M26-2l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#f3dfa6" />
             </symbol>
             <symbol id="orn" viewBox="0 0 150 14">
-                <path d="M0 7H62M88 7H150" stroke="#b8924a" fill="none" />
-                <path d="M75 1l6 6-6 6-6-6z" fill="#b8924a" />
+                <path d="M0 7H62M88 7H150" stroke="#e3c887" fill="none" />
+                <path d="M75 1l6 6-6 6-6-6z" fill="#e3c887" />
             </symbol>
             <symbol id="lf" viewBox="0 0 40 20">
-                <path d="M0 10C10-4 28-4 40 10 28 24 10 24 0 10Z" fill="#8f9a6a" />
-                <path d="M2 10H38" stroke="#6b7650" stroke-width=".8" />
+                <path d="M0 10C10-4 28-4 40 10 28 24 10 24 0 10Z" fill="#3f9a82" />
+                <path d="M2 10H38" stroke="#7fd1b8" stroke-width=".8" />
             </symbol>
             <symbol id="fw" viewBox="-50 -50 100 100">
                 <g fill="#fffaf2" stroke="#e6cfae" stroke-width=".8">
@@ -746,7 +1025,7 @@ html[lang=ta] .gdt{font-style:normal;letter-spacing:0}
                 <circle r="6" fill="#e6c97f" />
             </symbol>
             <symbol id="ca" viewBox="0 0 220 220">
-                <g stroke="#8f9a6a" stroke-width="1.4" fill="none">
+                <g stroke="#4fae96" stroke-width="1.4" fill="none">
                     <path d="M10 30C60 50 110 110 150 210" />
                     <path d="M30 10C80 30 160 70 210 110" />
                 </g>
@@ -762,15 +1041,15 @@ html[lang=ta] .gdt{font-style:normal;letter-spacing:0}
                 <use href="#pk" x="70" y="170" width="26" height="26" />
             </symbol>
             <symbol id="lt" viewBox="0 0 80 190">
-                <path d="M40 0V40" stroke="#b8924a" stroke-width="1.5" />
+                <path d="M40 0V40" stroke="#e3c887" stroke-width="1.5" />
                 <path d="M28 48C28 36 52 36 52 48Z" fill="url(#gg)" />
                 <path d="M30 48H50L58 66H22Z" fill="url(#gg)" />
-                <rect x="22" y="66" width="36" height="72" rx="6" fill="#f7dc96" fill-opacity=".85" stroke="#b8924a"
+                <rect x="22" y="66" width="36" height="72" rx="6" fill="#f7dc96" fill-opacity=".85" stroke="#e3c887"
                     stroke-width="2" />
-                <path d="M40 70V134M22 100H58" stroke="#b8924a" stroke-width="1" />
+                <path d="M40 70V134M22 100H58" stroke="#b99443" stroke-width="1" />
                 <ellipse cx="40" cy="108" rx="7" ry="14" fill="#fff4c4" />
                 <path d="M22 138H58L52 154H28Z" fill="url(#gg)" />
-                <path d="M40 154V176" stroke="#b8924a" stroke-width="2" />
+                <path d="M40 154V176" stroke="#e3c887" stroke-width="2" />
                 <circle cx="40" cy="182" r="5" fill="url(#gg)" />
             </symbol>
         </defs>
@@ -895,7 +1174,7 @@ html[lang=ta] .gdt{font-style:normal;letter-spacing:0}
                 <div class="btns r"><a class="btn" target="_blank" rel="noopener"
                         href="https://maps.app.goo.gl/C2tkyKpv8eTnB5Yw6"
                         data-t="bd"></a><a class="btn alt" target="_blank" rel="noopener"
-                        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nikkah+-+Abdul+Rahman+%26+Jeshima+Parveen&dates=20261025T043000Z/20261025T063000Z&location=Madina+Palli+Vasal+Mandapam,+Periyakulam,+Theni"
+                        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nikkah+-+Abib+Rahman+%26+Jeshima+Parveen&dates=20261025T043000Z/20261025T063000Z&location=Madina+Palli+Vasal+Mandapam,+Periyakulam,+Theni"
                         data-t="bc"></a></div>
             </div>
         </section>
@@ -942,26 +1221,76 @@ html[lang=ta] .gdt{font-style:normal;letter-spacing:0}
             </div>
         </section>
 
-        <section class="grand">
-    <div class="frame"></div>
-    <div class="sp" id="sp"></div>
-    <span class="fl tl"><svg viewBox="0 0 220 220"><use href="#ca" /></svg></span>
-    <span class="fl tr"><svg viewBox="0 0 220 220"><use href="#ca" /></svg></span>
-    <span class="fl bl"><svg viewBox="0 0 220 220"><use href="#ca" /></svg></span>
-    <span class="fl br2" style="--s:150px"><svg viewBox="0 0 220 220"><use href="#ca" /></svg></span>
-    <div class="z">
-        <svg class="gm" viewBox="-50 -50 100 100"><use href="#cres" /></svg>
-        <p class="gd r">بَارَكَ اللَّهُ لَكُمَا</p>
-        <h2 class="gn r" data-t="n1"></h2>
-        <span class="amp r">&amp;</span>
-        <h2 class="gn r" data-t="n2"></h2>
-        <div class="dline r">✦</div>
-        <p class="gdt r" data-t="gl"></p>
-    </div>
-    <div class="row" id="r1"></div>
-    <div class="row rv" id="r2"></div>
-    <div class="cr"><small data-t="cr1"></small><strong>Mohamed Asvath</strong><span>Web designer &amp; developer</span></div>
-</section>
+        <section class="grand" id="grand">
+            <div class="frame"></div>
+            <div class="sp" id="sp"></div>
+            <svg class="star" viewBox="-100 -100 200 200" aria-hidden="true">
+                <g fill="none" stroke="#e3c887" stroke-width=".6">
+                    <rect x="-60" y="-60" width="120" height="120" />
+                    <rect x="-60" y="-60" width="120" height="120" transform="rotate(45)" />
+                    <rect x="-60" y="-60" width="120" height="120" transform="rotate(22.5)" />
+                    <rect x="-60" y="-60" width="120" height="120" transform="rotate(67.5)" />
+                    <circle r="84" />
+                    <circle r="70" />
+                    <circle r="30" />
+                </g>
+            </svg>
+            <span class="fl tl"><svg viewBox="0 0 220 220">
+                    <use href="#ca" />
+                </svg></span>
+            <span class="fl tr"><svg viewBox="0 0 220 220">
+                    <use href="#ca" />
+                </svg></span>
+            <span class="fl bl"><svg viewBox="0 0 220 220">
+                    <use href="#ca" />
+                </svg></span>
+            <span class="fl br2" style="--s:150px"><svg viewBox="0 0 220 220">
+                    <use href="#ca" />
+                </svg></span>
+            <div class="z">
+                <svg class="gm" viewBox="-50 -50 100 100">
+                    <use href="#cres" />
+                </svg>
+                <h2 class="gn shine r" data-t="n1"></h2>
+                <span class="amp r">&amp;</span>
+                <h2 class="gn shine r" data-t="n2"></h2>
+                <div class="dline r">✦</div>
+                <p class="gdt r" data-t="gl"></p>
+
+                <div class="glass">
+                    <span class="gleam"></span>
+                    <h3 class="dttl shine r" data-t="dh"></h3>
+                    <p class="dar shine r" style="transition-delay:.15s">بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
+                    <p class="dtr r" style="transition-delay:.3s" data-t="dr"></p>
+                    <div class="dline r" style="transition-delay:.4s">✦</div>
+                    <p class="dmn r" style="transition-delay:.5s" data-t="dm"></p>
+                </div>
+            </div>
+            <div class="svc">
+                <div class="mono r"><span class="shine">MA</span></div>
+                <p class="cr1 r" data-t="cr1"></p>
+                <h3 class="sname shine r">Mohamed Asvath</h3>
+                <span class="role r" data-t="role"></span>
+                <div class="dline r">✦</div>
+                <h4 class="svh shine r" data-t="svh"></h4>
+                <p class="svs r" data-t="svs"></p>
+                <div class="sg">
+                    <div class="sc hot r" style="--d:0s;transition-delay:0s"><i>⚙️</i><div><em data-t="hotb"></em><b data-t="a1"></b><small data-t="a2"></small></div></div>
+                    <div class="sc r" style="--d:0.1s;transition-delay:0.1s"><i>🛒</i><b data-t="b1"></b><small data-t="b2"></small></div>
+                    <div class="sc r" style="--d:0.2s;transition-delay:0.2s"><i>🚀</i><b data-t="c1"></b><small data-t="c2"></small></div>
+                    <div class="sc r" style="--d:0.3s;transition-delay:0.3s"><i>🌐</i><b data-t="d1"></b><small data-t="d2"></small></div>
+                    <div class="sc r" style="--d:0.4s;transition-delay:0.4s"><i>💌</i><b data-t="e1"></b><small data-t="e2"></small></div>
+                    <div class="sc r" style="--d:0.5s;transition-delay:0.5s"><i>🏢</i><b data-t="f1"></b><small data-t="f2"></small></div>
+                    <div class="sc r" style="--d:0.6s;transition-delay:0.6s"><i>📊</i><b data-t="g1"></b><small data-t="g2"></small></div>
+                </div>
+                                <div class="btns r">
+                    <!-- REPLACE 91XXXXXXXXXX with your WhatsApp number (country code + number) -->
+                    <a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/919344790389?text=Hi%20Asvath%2C%20I%20want%20a%20website" data-t="cw"></a>
+                    <a class="btn alt" href="tel:+919344790389" data-t="cc"></a>
+                </div>
+            </div>
+            <div class="cr">© 2026 · Mohamed Asvath · Full Stack Developer</div>
+        </section>
     </main>
 
     <script>
@@ -969,16 +1298,27 @@ html[lang=ta] .gdt{font-style:normal;letter-spacing:0}
             var root = document.documentElement, body = document.body, $ = function (s) { return document.querySelector(s) }, $$ = function (s) { return document.querySelectorAll(s) }, lang = 'en';
             var D = {
                 en: {
-                    h1: 'You are cordially invited to the Nikkah of', n1: 'Abib Rahman', n2:'Jeshima Parveen', dd: 'Sunday · 25 October 2026 · 10 AM', c3: 'Open Invitation', cue: 'Scroll down',
+                    h1: 'You are cordially invited to the Nikkah of', n1: 'Abib Rahman', n2: 'Jeshima Parveen', dd: 'Sunday · 25 October 2026 · 10 AM', c3: 'Open Invitation', cue: 'Scroll down',
                     title: 'Nikkah (Wedding) Invitation', sal: 'Assalamu Alaikum Warahmatullahi Wabarakatuh', lead: 'Dear Beloved,', b1: 'By the abundant grace of Almighty Allah, the Most Gracious and Most Merciful, and by the blessed duas of our beloved Prophet Muhammad (ﷺ), on the 13th of Jamadil Awwal, Hijri 1448,', dl: '(25-10-2026) Sunday', b2: 'between 10:00 AM and 12:00 noon, at the blessed hour',
-                    fg: 'Grandson of A. Mohamed Anifa – (late) Fathimakani, and son of (late) M. Asan Mohamed – Tajnisa Begum, Sekurauthanur, Pudukottai village, Kujiliamparai taluk, Dindigul district — the pious', ng: 'A. Abdul Rahman', asg: 'the groom, with',
+                    fg: 'Grandson of A. Mohamed Anifa – (late) Fathimakani, and son of (late) M. Asan Mohamed – Tajnisa Begum, Sekurauthanur, Pudukottai village, Kujiliamparai taluk, Dindigul district — the pious', ng: 'A. Abib Rahman', asg: 'the groom, with',
                     fb: 'Granddaughter of (late) A. Kamardeen – Sawrabeevi of Vadakarai, Periyakulam, and daughter of K. Thamim Ansari of Quaid-e-Millath Nagar — the pious', nb: 'T. Jeshima Parveen', asb: 'the bride',
                     sd: 'Save the Date', cm: 'OCTOBER 2026', when: 'Sunday · 10:00 AM – 12:00 PM', hijri: 'Hijri 1448 · Jamadil Awwal 13', ud: 'Days', uh: 'Hours', um: 'Mins', us: 'Secs', done: 'Alhamdulillah – the Nikkah day is today!', dow: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
                     inv: 'With love, we invite you', v1: 'In sha Allah, as decided by the elders, the Nikkah will be held at Quaid-e-Millath Nagar, Vadakarai, Periyakulam, Theni district,', vn: 'Madina Pallivasal Mandapam', v2: 'Please join us for the Nikkah and the feast that follows, bless the couple and make dua for them.', bd: 'Directions', bc: 'Add to Calendar',
                     ha: 'With the same request,', han: 'K. Thamim Ansari', hap: 'Vadakarai, Periyakulam, Theni district.', hb: 'Yours sincerely,', hbn: 'M. Asan Mohamed<br>A. Tajnisa Begum', hbp: 'Sekurauthanur.',
                     inv2: 'Joyfully inviting you', l1: "Bride's brothers:", m1: 'T. Areef Mohamed<br>T. Azarudeen', l2: "Groom's sisters:", m2: 'B. Shaik Mohamed – Rubina Banu<br>A. Sadam Hussain – Rijwana Parveen Banu', l3: 'Little ones:', m3: 'S. Isma, S. Sameena Usena, S. Rayyan',
-                    gl: 'Barakallahu  · Together Forever', cr1: 'Created by',
-                    s: ['💌 Nikkah Invitations', '🌐 Business Websites', '⚙️ Full-Stack Web Application', '❤️ Animated Landing Pages', '📄 Portfolio Sites', '💹admin dashboard'], c: ['Premium UI', 'Smooth Animations', 'Mobile First', 'Fast Delivery', 'Custom Domain', 'Secure and Responsible']
+                    gl: 'Barakallahu  · Together Forever',
+                    dh: 'Dua for the Newlyweds', dr: 'Barakallahu laka wa baraka alayka, wa jamaa baynakuma fi khayr', dm: 'May Allah bless you, shower His blessings upon you, and unite you both in goodness. Ameen.',
+                    role: 'Full Stack Developer', svh: 'Want a website like this?', svs: 'I build fast, beautiful and secure websites and web apps for your business and your big days.', hotb: 'My speciality',
+                    a1: 'Full-Stack Applications', a2: 'Frontend, backend, database and login. Complete web apps built from scratch.',
+                    b1: 'E-Commerce Websites', b2: 'Online store with products, cart, payments and orders.',
+                    c1: 'Landing Pages', c2: 'Animated pages that win customers.',
+                    d1: 'Custom Domain', d2: 'Your own yourname.com, live on the web.',
+                    e1: 'Nikkah Invitations', e2: 'Animated bilingual invites like this one.',
+                    f1: 'Business Websites', f2: 'Portfolio and company sites that build trust.',
+                    g1: 'Admin Dashboards', g2: 'Manage orders, users and data in one place.',
+                    cw: 'WhatsApp Me', cc: 'Call Now',
+                    cr1: 'Designed & developed by',
+                    s: ['⚙️ Full-Stack Applications', '🛒 E-Commerce Websites', '🚀 Landing Pages', '🌐 Custom Domain', '💌 Nikkah Invitations', '📊 Admin Dashboards'], c: ['Premium UI', 'Smooth Animations', 'Mobile First', 'Fast Delivery', 'Custom Domain', 'Secure and Reliable']
                 },
                 ta: {
                     h1: 'நிக்காஹ் நிகழ்வுக்கு உங்களை அன்புடன் அழைக்கிறோம்', n1: 'அபிப் ரகுமான்', n2: 'ஜெஷிமா பர்வின்', dd: 'ஞாயிறு · 25 அக்டோபர் 2026 · காலை 10 மணி', c3: 'அழைப்பிதழைத் திற', cue: 'ஸ்க்ரோல் செய்யவும்',
@@ -989,19 +1329,47 @@ html[lang=ta] .gdt{font-style:normal;letter-spacing:0}
                     inv: 'அன்புடன் அழைக்கிறோம்', v1: 'இன்ஷா அல்லாஹ், நிக்காஹ் (திருமணம்) செய்ய பெரியோர்களால் நிச்சயித்தவண்ணம் தேனி மாவட்டம், வடகரை பெரியகுளம் காயிதே மில்லத் நகர்,', vn: 'மதினா பள்ளிவாசல் மண்டபத்தில்', v2: 'நிகழவிருக்கும் நிக்காஹ் உடன் நடைபெறும் விருந்து உபசரிப்பிலும் தாங்கள் வருகைதந்து மணமக்களை வாழ்த்தி துஆ செய்யுமாறு அன்புடன் அழைக்கிறோம்.', bd: 'வழித்தடம்', bc: 'நாள்காட்டியில் சேர்',
                     ha: 'யாளும் அவ்வண்ணமே கோரும்,', han: 'K. தமிம் அன்சாரி', hap: 'வடகரை, பெரியகுளம், தேனி மாவட்டம்.', hb: 'இங்ஙனம் தங்கள் அன்புள்ள,', hbn: 'M. அசன் முகமது<br>A. தாஜ்நிசா பேகம்', hbp: 'சேகுராவுத்தனூர்.',
                     inv2: 'அன்புடன் அழைத்து மகிழும்', l1: 'மணமகள் தம்பி :', m1: 'T. ஆரீஃப்முகமது<br>T. அஜார்த்தீன்', l2: 'மணமகன் சகோதரிகள் :', m2: 'B. சேக்முகமது – ரூபினா பானு<br>A. சதாம் உசேன் – ரிஜ்வானா பர்வின் பானு', l3: 'குட்டீஸ் :', m3: 'S. இஸ்மா, S. சமீனா உசேனா, S. ரய்யான்',
-                    gl: 'பாரகல்லாஹு லகுமா · என்றென்றும் இணைந்து', cr1: 'உருவாக்கியவர்',
-                    s: ['💌 திருமண அழைப்பிதழ்கள்', '🌐 வணிக இணையதளங்கள்', '⚙️ Full-Stack செயலிகள்', '✨ அனிமேஷன் பக்கங்கள்', '📄 போர்ட்ஃபோலியோ', '📲 வாட்ஸ்அப் பகிர்வு'], c: ['பிரீமியம் வடிவமைப்பு', 'மென்மையான அனிமேஷன்', 'மொபைல் முதன்மை', 'விரைவான டெலிவரி', 'சொந்த டொமைன்', 'இருமொழி']
+                    gl: 'பாரகல்லாஹு லகுமா · என்றென்றும் இணைந்து',
+                    dh: 'மணமக்களை வாழ்த்தும் துஆ', dr: 'பாரக்கல்லாஹு ல(க்)க வபார(க்)க அலைக்க, வஜமஅ பைனக்குமா ஃபிகைர்', dm: 'பொருள் : அல்லாஹ் உங்கள் இருவருக்கும் அகத்திலும் புறத்திலும் பரகத் செய்வானாக ! மேலும் உங்கள் இருவரையும் நற்காரியங்களில் ஒன்று சேர்ப்பானாக ! ஆமீன் !',
+                    role: 'ஃபுல் ஸ்டாக் டெவலப்பர்', svh: 'இது போன்ற இணையதளம் வேண்டுமா?', svs: 'உங்கள் வணிகத்திற்கும் சிறப்பு நாட்களுக்கும் வேகமான, அழகான, பாதுகாப்பான இணையதளங்களை உருவாக்குகிறேன்.', hotb: 'என் சிறப்பு',
+                    a1: 'Full-Stack செயலிகள்', a2: 'ஃப்ரண்ட்எண்ட், பேக்எண்ட், டேட்டாபேஸ், லாகின் உடன் முழுமையான வெப் செயலிகள்.',
+                    b1: 'இ-காமர்ஸ் இணையதளங்கள்', b2: 'பொருட்கள், கார்ட், பேமெண்ட், ஆர்டர் உடன் ஆன்லைன் கடை.',
+                    c1: 'லேண்டிங் பக்கங்கள்', c2: 'வாடிக்கையாளர்களை ஈர்க்கும் அனிமேஷன் பக்கங்கள்.',
+                    d1: 'சொந்த டொமைன்', d2: 'உங்கள் சொந்த yourname.com இணையத்தில்.',
+                    e1: 'திருமண அழைப்பிதழ்கள்', e2: 'இது போன்ற அனிமேஷன் இருமொழி அழைப்பிதழ்கள்.',
+                    f1: 'வணிக இணையதளங்கள்', f2: 'நம்பிக்கை தரும் நிறுவன, போர்ட்ஃபோலியோ தளங்கள்.',
+                    g1: 'அட்மின் டாஷ்போர்டு', g2: 'ஆர்டர், பயனர், தரவுகளை ஒரே இடத்தில் நிர்வகிக்க.',
+                    cw: 'வாட்ஸ்அப்பில் பேசுங்கள்', cc: 'அழைக்க',
+                    cr1: 'வடிவமைத்து உருவாக்கியவர்',
+                    s: ['⚙️ Full-Stack செயலிகள்', '🛒 இ-காமர்ஸ் தளங்கள்', '🚀 லேண்டிங் பக்கங்கள்', '🌐 சொந்த டொமைன்', '💌 திருமண அழைப்பிதழ்கள்', '📊 அட்மின் டாஷ்போர்டு'], c: ['பிரீமியம் வடிவமைப்பு', 'மென்மையான அனிமேஷன்', 'மொபைல் முதன்மை', 'விரைவான டெலிவரி', 'சொந்த டொமைன்', 'பாதுகாப்பான, நம்பகமான']
                 }
             };
             function mq(id, a, c) { var h = a.map(function (x) { return '<span class="chip">' + (c ? '✦ ' : '') + x + '</span>' }).join(''); $(id).innerHTML = '<div class="trk">' + h + h + '</div>' }
             function cal() { var h = '', n, f = new Date(2026, 9, 1).getDay(); D[lang].dow.forEach(function (d) { h += '<span class="w">' + d + '</span>' }); for (n = 0; n < f; n++)h += '<span></span>'; for (n = 1; n <= 31; n++)h += '<span class="d' + (n == 25 ? ' hit' : '') + '">' + n + '</span>'; $('#gr').innerHTML = h }
-            function apply(l) { lang = l; root.lang = l; var d = D[l]; $$('[data-t]').forEach(function (el) { el.innerHTML = d[el.getAttribute('data-t')] }); $$('.lang button').forEach(function (b) { b.classList.toggle('on', b.dataset.l === l) }); cal(); mq('#r1', d.s); mq('#r2', d.c, 1) }
+            function apply(l) { lang = l; root.lang = l; var d = D[l]; $$('[data-t]').forEach(function (el) { el.innerHTML = d[el.getAttribute('data-t')] }); $$('.lang button').forEach(function (b) { b.classList.toggle('on', b.dataset.l === l) }); cal() }
             $$('.lang button').forEach(function (b) { b.onclick = function () { apply(b.dataset.l) } }); apply('en');
             var sp = $('#sp'), i, e; for (i = 0; i < 30; i++) { e = document.createElement('i'); e.className = 'st'; e.style.cssText = 'left:' + Math.random() * 100 + '%;top:' + Math.random() * 100 + '%;--w:' + (4 + Math.random() * 9) + 'px;--t:' + (2 + Math.random() * 4) + 's;--dl:' + (-Math.random() * 5) + 's'; sp.appendChild(e) }
             var target = new Date('2026-10-25T10:00:00+05:30').getTime(), c = {}; $$('[data-u]').forEach(function (b) { c[b.dataset.u] = b });
             function p(v) { return v < 10 ? '0' + v : '' + v }
-            function tick() { var d = target - Date.now(); if (d <= 0) { $('#count').innerHTML = '<p style="grid-column:1/-1;margin:0;color:#7b4a2c;font-weight:600">' + D[lang].done + '</p>'; return false } var s = Math.floor(d / 1000); c.d.textContent = p(Math.floor(s / 86400)); c.h.textContent = p(Math.floor(s % 86400 / 3600)); c.m.textContent = p(Math.floor(s % 3600 / 60)); c.s.textContent = p(s % 60); return true }
+            function tick() { var d = target - Date.now(); if (d <= 0) { $('#count').innerHTML = '<p style="grid-column:1/-1;margin:0;color:#e3c887;font-weight:600">' + D[lang].done + '</p>'; return false } var s = Math.floor(d / 1000); c.d.textContent = p(Math.floor(s / 86400)); c.h.textContent = p(Math.floor(s % 86400 / 3600)); c.m.textContent = p(Math.floor(s % 3600 / 60)); c.s.textContent = p(s % 60); return true }
             if (tick()) { var tm = setInterval(function () { if (!tick()) clearInterval(tm) }, 1000) }
+
+            /* footer scroll-linked effect */
+            var gs = $('#grand'), gt = 0;
+            function gp() { var r = gs.getBoundingClientRect(); gs.style.setProperty('--p', Math.min(1, Math.max(0, (innerHeight - r.top) / (innerHeight * .9))).toFixed(3)) }
+            addEventListener('scroll', function () { if (gt) return; gt = requestAnimationFrame(function () { gt = 0; gp() }) }, { passive: true }); gp();
+
+            /* lenis-style smooth scroll (desktop wheel) */
+            if (!matchMedia('(pointer:coarse),(prefers-reduced-motion:reduce)').matches) {
+                root.classList.add('lenis');
+                var cur = 0, tgt = 0, raf = 0;
+                var lim = function (v) { return Math.max(0, Math.min(root.scrollHeight - innerHeight, v)) };
+                var loop = function () { cur += (tgt - cur) * .09; if (Math.abs(tgt - cur) < .4) { cur = tgt; raf = 0 } scrollTo(0, cur); if (raf) raf = requestAnimationFrame(loop) };
+                var go = function (t) { if (!raf) { cur = scrollY; raf = requestAnimationFrame(loop) } tgt = lim(t) };
+                addEventListener('wheel', function (e) { if (body.classList.contains('lock') || e.ctrlKey) return; e.preventDefault(); go((raf ? tgt : scrollY) + e.deltaY * (e.deltaMode === 1 ? 32 : 1)) }, { passive: false });
+                $$('a[href^="#"]').forEach(function (a) { a.addEventListener('click', function (ev) { var t = $(a.getAttribute('href')); if (t) { ev.preventDefault(); go(t.getBoundingClientRect().top + scrollY) } }) });
+            }
+
             var tk = 0; addEventListener('scroll', function () { if (tk) return; tk = requestAnimationFrame(function () { tk = 0; var h = root.scrollHeight - innerHeight; $('#bar').style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')' }) }, { passive: true });
             $('#open').onclick = function () {
                 var cv = $('#cover'); scrollTo(0, 0); root.classList.add('js'); cv.classList.add('open'); body.classList.remove('lock');

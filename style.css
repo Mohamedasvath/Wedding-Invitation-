@@ -1,0 +1,982 @@
+
+Gemini
+
+Plan steps
+New chat
+Search chats
+Scheduled
+Images
+Videos
+Library
+New notebook
+Untitled notebook
+Responsive Animated HTML Invitation Design
+Tailwind Invitation Design with Lenis
+TVS Apache Color Modification Guide
+Cinematic Tea Making Video Creation
+Tea Making Video Generation
+Cinematic Superhero Apartment Portrait
+Salon Hero Section React Fix
+Ice Cream Melting Video Creation
+Hero.jsx Component with Tailwind CSS
+ethula innum better ah pannu and then UI improve pannu and text clear ah erukkanum and colour text colour also clear ah erukkanum Ui best ah pannu video quality low va erukku improve pananum text content ah chnage panniru
+BMW M3 GTR 3D Web Experience Design
+High-End Intro Screen Concepts
+Birthday Website Code Generation
+Upgraded React Landing Page with Claymorphism
+React Hero Section Enhancement
+Claymorphic Login Page Refactor
+Claymorphism Templates Page Redesign
+Modern React Landing Page Rewrite
+Enhanced Claymorphic Landing Page
+Responsive Futuristic Font Update Code
+React Hero Section Design
+React Hero Section Video & Menu Update
+React Hero Section: Logistics App
+Recreating Hero Section Design
+React Hero Component Redesign
+Conversation with Gemini
+this is the invitation 2nd image desighn mari venum html code and animation html and css and js and make it resposnsive Ui and responsive desighn make it text animation
+
+I have designed an animated digital wedding invitation that takes the details from your original Tamil invitation card (Image 1) and brings them to life in the modern smartphone design from Image 2.
+
+Here are your project files ready to preview, download, and host:
+
+HTML icon
+index
+ HTML 
+CSS icon
+style
+ CSS 
+JS icon
+script
+ JS 
+Design & Feature Highlights
+Visual Style (Faithfully Crafted from Image 2):
+
+Mughal / Islamic Scalloped Archway: High-resolution vector arch featuring intricate gold arabesque trellis work (Jali) and crescent finials.
+
+Blush Rose & Gold Botanical Accents: Hand-crafted SVG corner blooms in blush pink, terracotta, and burgundy framed with gold leaf sprigs.
+
+Monogram Showcase Card (Phone 1): Interlocking "AJ" monogram for A. அப்பிரகுமான் and T. ஜெஷிமா பர்வீன், with the script title "Celebrating".
+
+Center Royal Invitation (Phone 2): Features shimmering Arabic Bismillah calligraphy (بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ), the parent invitation lines, couple names in romantic script and Tamil, and the distinct 3-column date box (SUNDAY | OCT 25 2026 | 10:00 AM - 12:00 PM).
+
+Save the Date & Family Lineage Card (Phone 3): Stacked gold date box (10 / 25 / 26), "In sha Allah", live countdown timer, and the complete family details from Image 1.
+
+Text & Visual Animations:
+
+Gold Foil Shimmer Effect: A moving metallic gradient that sweeps continuously across the couple's names and headers (goldSheen keyframe animation).
+
+Cascade Entrance: Smooth staggered vertical fade-up transitions for text elements when switching between sections.
+
+Floating Petals & Gold Dust Canvas: An interactive HTML5 Canvas particle system of falling rose petals and gentle gold glitter sparks.
+
+Live Countdown Timer: Days, hours, minutes, and seconds counting down to October 25, 2026, 10:00 AM IST.
+
+Responsive UI & Mobile Experience:
+
+Desktop (Showcase Mode): Renders all three smartphone screens side-by-side with subtle 3D perspective and hover lift, exactly like the trio showcase in Image 2.
+
+Mobile & Tablet (Adaptive Mode): Features a sticky top navigation bar (1. முகப்பு, 2. நிக்காஹ் அழைப்பு, 3. Save The Date & குடும்பம்) allowing guests to glide smoothly between cards without awkward horizontal cutoffs.
+
+Interactive Guest Features:
+
+Language Toggle: One-tap switching between தமிழ் (Tamil), English, or இருமொழி (Bilingual) view.
+
+Ambient Audio Synthesizer: Uses the built-in browser Web Audio API to play an auspicious pentatonic harp melody with a floating animated music icon—requiring zero external audio files.
+
+Calendar Event Download: One click downloads an .ics calendar invitation file with event times, description, and location.
+
+Google Maps & WhatsApp RSVP: Direct button linking to Google Maps for Madina Mosque Hall, Vadagarai, Periyakulam, and a pre-composed WhatsApp greeting message for guests to send blessings directly.
+
+Key Animation Code Snippets
+1. Gold Metallic Shimmer (style.css)
+CSS
+.shimmer-text {
+  background: linear-gradient(
+    110deg,
+    #7A4F13 0%,
+    #C49A37 25%,
+    #FFE996 50%,
+    #C49A37 75%,
+    #7A4F13 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldSheen 4.2s ease-in-out infinite;
+}
+
+@keyframes goldSheen {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+2. Staggered Cascade Entrance (style.css)
+CSS
+.anim-cascade {
+  opacity: 1;
+  transform: translateY(0);
+  animation: cascadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.cascade-d1 { animation-delay: 0.1s; }
+.cascade-d2 { animation-delay: 0.2s; }
+.cascade-d3 { animation-delay: 0.3s; }
+.cascade-d4 { animation-delay: 0.4s; }
+
+@keyframes cascadeIn {
+  from {
+    opacity: 0.3;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+3. Real-time Countdown Timer (script.js)
+JavaScript
+const targetWeddingDate = new Date("2026-10-25T10:00:00+05:30").getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const diff = targetWeddingDate - now;
+
+  if (diff > 0) {
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("box-days").textContent = String(d).padStart(2, '0');
+    document.getElementById("box-hours").textContent = String(h).padStart(2, '0');
+    document.getElementById("box-mins").textContent = String(m).padStart(2, '0');
+    document.getElementById("box-secs").textContent = String(s).padStart(2, '0');
+  }
+}
+setInterval(updateCountdown, 1000);
+You can open index.html directly in any web browser or upload these three files to GitHub Pages, Netlify, or your web server for sharing.
+
+
+
+
+
+Gemini is AI and can make mistakes.
+
+:root {
+      --bg-silk: #F8F4EC;
+      --bg-cream: #FCFAF6;
+      --gold-dark: #825A1A;
+      --gold-mid: #C29B38;
+      --gold-light: #F7E4A1;
+      --gold-foil: linear-gradient(135deg, #a67c1e 0%, #fbe89d 30%, #c49a37 55%, #fdf5c9 80%, #946914 100%);
+      --gold-foil-text: linear-gradient(135deg, #7c4e12 0%, #cba442 28%, #8f641b 48%, #b38526 72%, #734910 100%);
+      --text-espresso: #2C1810;
+      --text-maroon: #6A181C;
+      --text-terracotta: #8C4730;
+      --font-serif: 'Noto Serif Tamil', 'Playfair Display', 'Cormorant Garamond', 'Baskerville', 'Georgia', serif;
+      --font-sans: 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-script: 'Great Vibes', 'Alex Brush', 'Brush Script MT', 'Snell Roundhand', cursive;
+      --font-arabic: 'Noto Naskh Arabic', 'Traditional Arabic', serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: #F4ECE0;
+      background-image: 
+        radial-gradient(ellipse at 50% 0%, #FFFFFF 0%, #F5ECE0 45%, #E6DAC7 100%);
+      min-height: 100vh;
+      font-family: var(--font-serif);
+      color: var(--text-espresso);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Silk drape textured overlay */
+    .silk-background {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background: 
+        radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.75) 0%, transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(240, 225, 205, 0.5) 0%, transparent 50%),
+        linear-gradient(115deg, rgba(230, 215, 195, 0.25) 0%, transparent 35%, rgba(255,255,255,0.35) 50%, transparent 65%, rgba(220, 200, 175, 0.2) 100%);
+    }
+
+    #particle-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 12;
+    }
+
+    /* Top Floating Utility Header */
+    .top-bar {
+      position: fixed;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 253, 249, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 6px 14px;
+      border-radius: 40px;
+      border: 1px solid rgba(194, 155, 56, 0.5);
+      box-shadow: 0 8px 30px rgba(74, 46, 24, 0.12);
+      max-width: 96vw;
+    }
+
+    .btn-pill {
+      background: transparent;
+      border: 1px solid rgba(194, 155, 56, 0.45);
+      border-radius: 20px;
+      padding: 6px 13px;
+      font-size: 12px;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      color: var(--text-espresso);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-pill:hover, .btn-pill.active {
+      background: var(--gold-foil);
+      color: #2D1A0A;
+      border-color: #825A1A;
+      font-weight: 700;
+      box-shadow: 0 2px 10px rgba(194, 155, 56, 0.35);
+    }
+
+    .music-pulse {
+      display: inline-block;
+      animation: pulseMusic 1.4s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseMusic {
+      0% { transform: scale(1) rotate(0deg); }
+      100% { transform: scale(1.18) rotate(10deg); }
+    }
+
+    /* Main Container */
+    .app-wrapper {
+      position: relative;
+      z-index: 20;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 70px 16px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header-zone {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header-tagline {
+      font-family: var(--font-serif);
+      font-size: 12.5px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      font-weight: 700;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .header-tagline::before, .header-tagline::after {
+      content: "";
+      width: 36px;
+      height: 1.5px;
+      background: var(--gold-mid);
+    }
+
+    .header-main-title {
+      font-size: 27px;
+      font-weight: 700;
+      color: #7A4F13;
+      background: var(--gold-foil-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .header-subtext {
+      font-size: 14px;
+      color: #704F34;
+      font-style: italic;
+    }
+
+    /* Nav Tabs for Cards */
+    .card-nav {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 22px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 4px 6px;
+      border-radius: 30px;
+      border: 1px solid rgba(194, 155, 56, 0.45);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 60px;
+      z-index: 90;
+    }
+
+    .card-nav-btn {
+      padding: 7px 16px;
+      border-radius: 20px;
+      border: none;
+      background: transparent;
+      font-family: var(--font-sans);
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-espresso);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .card-nav-btn.active {
+      background: #FFFFFF;
+      color: var(--gold-dark);
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border: 1px solid rgba(194, 155, 56, 0.5);
+    }
+
+    /* Showcase Layout: 3 Phones Side-by-Side (Image 2 Replica) */
+    .devices-stage {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 28px;
+      width: 100%;
+      perspective: 1400px;
+      transition: all 0.4s ease;
+    }
+
+    /* Luxury Phone Mockup */
+    .phone-frame {
+      width: 360px;
+      height: 750px;
+      background: #191410;
+      border-radius: 48px;
+      padding: 10px;
+      box-shadow: 
+        0 28px 70px rgba(50, 30, 15, 0.25),
+        0 10px 25px rgba(0, 0, 0, 0.15),
+        inset 0 0 0 2px #4D3F33,
+        inset 0 0 0 4px #1A140F;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+    }
+
+    .phone-frame:hover {
+      transform: translateY(-8px);
+      box-shadow: 
+        0 38px 85px rgba(50, 30, 15, 0.35),
+        0 14px 30px rgba(0, 0, 0, 0.2),
+        inset 0 0 0 2px #5C4B3D,
+        inset 0 0 0 4px #1A140F;
+    }
+
+    @media (min-width: 1200px) {
+      .phone-pos-left {
+        transform: scale(0.94) translateX(10px) rotateY(5deg);
+      }
+      .phone-pos-left:hover {
+        transform: scale(0.97) translateX(4px) rotateY(1deg) translateY(-8px);
+      }
+      .phone-pos-center {
+        transform: scale(1.02) translateY(-6px);
+        z-index: 5;
+        box-shadow: 
+          0 40px 90px rgba(50, 30, 15, 0.32),
+          0 12px 30px rgba(0, 0, 0, 0.2),
+          inset 0 0 0 2px #6E5A48;
+      }
+      .phone-pos-center:hover {
+        transform: scale(1.04) translateY(-14px);
+      }
+      .phone-pos-right {
+        transform: scale(0.94) translateX(-10px) rotateY(-5deg);
+      }
+      .phone-pos-right:hover {
+        transform: scale(0.97) translateX(-4px) rotateY(-1deg) translateY(-8px);
+      }
+    }
+
+    /* Screen display */
+    .phone-inner {
+      width: 100%;
+      height: 100%;
+      background: #FDFBF7;
+      border-radius: 40px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      box-shadow: inset 0 0 16px rgba(194, 155, 56, 0.12);
+      scrollbar-width: thin;
+      scrollbar-color: rgba(194, 155, 56, 0.4) transparent;
+    }
+
+    .phone-inner::-webkit-scrollbar {
+      width: 4px;
+    }
+    .phone-inner::-webkit-scrollbar-thumb {
+      background: rgba(194, 155, 56, 0.4);
+      border-radius: 4px;
+    }
+
+    /* Notch */
+    .phone-header-notch {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 86px;
+      height: 18px;
+      background: #191410;
+      border-radius: 12px;
+      z-index: 60;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .notch-camera {
+      width: 6px;
+      height: 6px;
+      background: #0B0806;
+      border-radius: 50%;
+      border: 1px solid #33261C;
+    }
+    .notch-speaker {
+      width: 32px;
+      height: 3px;
+      background: #2D2118;
+      border-radius: 2px;
+    }
+
+    /* Card Interior Content */
+    .invitation-screen-content {
+      padding: 38px 18px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 100%;
+      position: relative;
+      background: 
+        radial-gradient(circle at 50% 10%, rgba(247, 237, 218, 0.9) 0%, transparent 65%),
+        radial-gradient(circle at 50% 90%, rgba(247, 237, 218, 0.7) 0%, transparent 65%),
+        #FFFDF9;
+    }
+
+    /* Ornate Gold Mughal Arch */
+    .arch-wrapper {
+      width: 100%;
+      max-width: 310px;
+      margin-top: 4px;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .arch-svg-graphic {
+      width: 100%;
+      height: auto;
+      max-height: 135px;
+      filter: drop-shadow(0 4px 6px rgba(180, 135, 60, 0.2));
+    }
+
+    /* Islamic Calligraphy */
+    .arabic-bismillah-text {
+      font-family: var(--font-arabic);
+      font-size: 26px;
+      color: #9C7026;
+      line-height: 1.4;
+      margin-bottom: 6px;
+      direction: rtl;
+      position: relative;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+    }
+
+    /* Gold shimmer animation */
+    .shimmer-text {
+      background: linear-gradient(
+        110deg,
+        #7A4F13 0%,
+        #C49A37 25%,
+        #FFE996 50%,
+        #C49A37 75%,
+        #7A4F13 100%
+      );
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: goldSheen 4.2s ease-in-out infinite;
+    }
+
+    @keyframes goldSheen {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* Smooth Entrance Animations */
+    .anim-cascade {
+      opacity: 1;
+      transform: translateY(0);
+      animation: cascadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .cascade-d1 { animation-delay: 0.1s; }
+    .cascade-d2 { animation-delay: 0.2s; }
+    .cascade-d3 { animation-delay: 0.3s; }
+    .cascade-d4 { animation-delay: 0.4s; }
+
+    @keyframes cascadeIn {
+      from {
+        opacity: 0.3;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* CARD 1: Monogram Specifics */
+    .script-celebrating {
+      font-family: var(--font-script);
+      font-size: 44px;
+      color: #8C4730;
+      line-height: 1;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+
+    .monogram-interlocking {
+      margin: 10px 0 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .mono-letter {
+      font-family: 'Playfair Display', 'Georgia', serif;
+      font-size: 114px;
+      font-weight: 700;
+      line-height: 0.85;
+      display: inline-block;
+    }
+
+    .mono-left {
+      color: #8C4730;
+      text-shadow: 2px 4px 10px rgba(140, 71, 48, 0.25);
+    }
+
+    .mono-right {
+      background: var(--gold-foil);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      left: -12px;
+      filter: drop-shadow(2px 3px 5px rgba(180, 135, 45, 0.3));
+    }
+
+    .names-monogram-label {
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: #6C4222;
+      margin-top: 6px;
+    }
+
+    /* CARD 2: Main Invitation Details */
+    .script-person-name {
+      font-family: var(--font-script);
+      font-size: 46px;
+      line-height: 1.1;
+      color: #6A181C;
+      display: block;
+      margin-top: 2px;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+    }
+
+    .tamil-person-name {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: #6A181C;
+      line-height: 1.25;
+      margin: 2px 0 3px;
+      letter-spacing: 0.4px;
+    }
+
+    .invitation-parents-header {
+      font-size: 11px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #5C3D28;
+      line-height: 1.6;
+      margin: 6px 0 8px;
+    }
+
+    /* Three Column Date Badge (Image 2 Replica) */
+    .three-col-date-badge {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      width: 100%;
+      max-width: 290px;
+      margin: 12px auto 12px;
+      padding: 9px 6px;
+      border-top: 1px solid rgba(194, 155, 56, 0.55);
+      border-bottom: 1px solid rgba(194, 155, 56, 0.55);
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .badge-col-side {
+      font-size: 10.5px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #5C3E28;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .badge-col-middle {
+      padding: 0 18px;
+      border-left: 1px solid rgba(194, 155, 56, 0.45);
+      border-right: 1px solid rgba(194, 155, 56, 0.45);
+    }
+
+    .badge-number {
+      font-size: 34px;
+      font-weight: 700;
+      color: #8C4730;
+      line-height: 1;
+      font-family: var(--font-serif);
+    }
+
+    .badge-month {
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: #825A1A;
+      display: block;
+    }
+
+    .badge-year {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: #694A36;
+      display: block;
+      margin-top: 2px;
+      font-weight: 600;
+    }
+
+    /* CARD 3: Save the Date & Family Specifics */
+    .script-save-date {
+      font-family: var(--font-script);
+      font-size: 46px;
+      color: #8C4730;
+      margin-top: 6px;
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+
+    .gold-date-frame {
+      width: 175px;
+      height: 235px;
+      margin: 10px auto;
+      border: 2px solid #C29B38;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 254, 250, 0.92);
+      box-shadow: 0 8px 24px rgba(194, 155, 56, 0.15);
+    }
+
+    .gold-date-frame::before {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border: 1px solid rgba(194, 155, 56, 0.5);
+      pointer-events: none;
+    }
+
+    .stacked-date-numbers {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .stacked-digit {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.05;
+      color: #8C4730;
+      font-family: var(--font-serif);
+      letter-spacing: 2px;
+    }
+
+    .script-in-sha-allah {
+      font-family: var(--font-script);
+      font-size: 34px;
+      color: #8C4730;
+      margin: 4px 0 8px;
+    }
+
+    /* Countdown Widget */
+    .countdown-widget {
+      width: 100%;
+      margin: 8px 0 10px;
+    }
+
+    .countdown-cells {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+    }
+
+    .countdown-box {
+      background: #FFFFFF;
+      border: 1px solid rgba(194, 155, 56, 0.45);
+      border-radius: 8px;
+      padding: 5px 4px;
+      min-width: 50px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .count-number {
+      font-size: 19px;
+      font-weight: 700;
+      color: #8C4730;
+      font-family: var(--font-serif);
+      line-height: 1.1;
+      display: block;
+    }
+
+    .count-label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #825A1A;
+      font-weight: 700;
+    }
+
+    /* Full Family Pedigree Information (Image 1 Grounding) */
+    .family-pedigree-card {
+      width: 100%;
+      text-align: left;
+      margin-top: 10px;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 12px;
+      padding: 12px;
+      border: 1px solid rgba(194, 155, 56, 0.35);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+    }
+
+    .pedigree-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #8C4730;
+      border-bottom: 1px solid rgba(194, 155, 56, 0.3);
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .pedigree-row {
+      font-size: 11.5px;
+      line-height: 1.65;
+      color: #382417;
+      margin-bottom: 8px;
+    }
+
+    .pedigree-tag {
+      font-weight: 700;
+      color: #6A181C;
+    }
+
+    /* Action Buttons */
+    .action-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      justify-content: center;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .btn-action {
+      flex: 1 1 calc(50% - 5px);
+      min-width: 120px;
+      padding: 9px 8px;
+      background: #FFFFFF;
+      border: 1px solid #C29B38;
+      border-radius: 20px;
+      font-family: var(--font-sans);
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #3E2413;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(194, 155, 56, 0.15);
+    }
+
+    .btn-action:hover {
+      background: var(--gold-foil);
+      color: #2D1A0A;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(194, 155, 56, 0.3);
+    }
+
+    .btn-action.featured {
+      background: var(--gold-foil);
+      color: #241407;
+      border-color: #825A1A;
+    }
+
+    /* Modal for RSVP & Wishes */
+    .wish-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(30, 20, 10, 0.65);
+      backdrop-filter: blur(5px);
+      z-index: 250;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .wish-modal-card {
+      background: #FFFDF9;
+      max-width: 460px;
+      width: 100%;
+      border-radius: 20px;
+      padding: 24px;
+      border: 2px solid #C29B38;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      position: relative;
+    }
+
+    .btn-close-modal {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #8C4730;
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 1199px) {
+      .devices-stage {
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+      }
+      .phone-frame {
+        width: 375px;
+        height: auto;
+        min-height: auto;
+      }
+      .phone-inner {
+        height: auto;
+        overflow-y: visible;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .app-wrapper {
+        padding: 65px 8px 30px;
+      }
+      .top-bar {
+        padding: 4px 8px;
+        gap: 4px;
+      }
+      .btn-pill {
+        padding: 5px 8px;
+        font-size: 11px;
+      }
+      .card-nav {
+        top: 52px;
+        width: 98%;
+        justify-content: center;
+      }
+      .card-nav-btn {
+        padding: 6px 10px;
+        font-size: 11px;
+      }
+      .phone-frame {
+        width: 100%;
+        border-radius: 36px;
+        padding: 8px;
+        height: auto;
+        min-height: auto;
+      }
+      .phone-inner {
+        border-radius: 30px;
+        height: auto;
+        overflow-y: visible;
+      }
+      .invitation-screen-content {
+        padding: 28px 12px 20px;
+      }
+      .script-person-name {
+        font-size: 38px;
+      }
+      .tamil-person-name {
+        font-size: 21px;
+      }
+      .mono-letter {
+        font-size: 96px;
+      }
+      .header-main-title {
+        font-size: 22px;
+      }
+    }
